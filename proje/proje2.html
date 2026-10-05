@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
+    <link rel="stylesheet" href="../assets/icon/FontAwesome.Pro.7.1.0.0/fontawesome-pro-7.1.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/node_modules/mdb-ui-kit/css/mdb.min.css" />
+    <link rel="stylesheet" href="../assets/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./proje2.css" />
+</head>
+
+<body dir="rtl">
+
+    <!-- start responsive header -->
+    <div class="restop">
+        <input type="text" placeholder="شروع جستجو در آشیانه" name="shro" />
+        <i class="fa-thin fa-magnifying-glass"></i>
+    </div>
+    <!-- end responsive header -->
+
+    <!-- start responsive searchtape -->
+    <div class="ressearchtape">
+        <i class="fa-light fa-arrow-right"></i>
+        <input type="text" placeholder="جستجو در اقامتگاه ها ..." name="searcheghamat" />
+    </div>
+    <!-- end responsive searchtape -->
+
+    <!-- start responsive searchpage -->
+    <div class="ressearch">
+        <div class="searchbox">
+            <i class="fa-light fa-arrow-right"></i>
+            <input type="text" placeholder="مقصد خود را جستجو کنید ..." name="searchmaghsad" />
+        </div>
+        <div class="daste">
+            <h2>دسته بندی های پیشنهادی</h2>
+            <div class="filter">
+                <div class="popular" tabindex="0">
+                    <i class="fa-light fa-heart-circle-check"></i>
+                    <h6>محبوب ترینها</h6>
+                </div>
+                <div class="rezerv" tabindex="0">
+                    <i class="fa-light fa-chart-line"></i>
+                    <h6>بیشترین رزرو</h6>
+                </div>
+                <div class="villa" tabindex="0">
+                    <i class="fa-light fa-buildings"></i>
+                    <h6>ویلا</h6>
+                </div>
+                <div class="apartment" tabindex="0">
+                    <i class="fa-light fa-apartment"></i>
+                    <h6>آپارتمان</h6>
+                </div>
+                <div class="boom" tabindex="0">
+                    <i class="fa-light fa-tree-city"></i>
+                    <h6>بومگردی</h6>
+                </div>
+                <div class="shop" tabindex="0">
+                    <i class="fa-light fa-cart-shopping"></i>
+                    <h6>مرکز خرید</h6>
+                </div>
+                <div class="sports" tabindex="0">
+                    <i class="fa-light fa-sneaker-running"></i>
+                    <h6>ورزشی</h6>
+                </div>
+                <div class="pilgrimage" tabindex="0">
+                    <i class="fa-light fa-mosque"></i>
+                    <h6>زیارتی</h6>
+                </div>
+                <div class="historical" tabindex="0">
+                    <i class="fa-light fa-landmark-magnifying-glass"></i>
+                    <h6>تاریخی</h6>
+                </div>
+                <div class="trend" tabindex="0">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <h6>ترندها</h6>
+                </div>
+                <div class="resturan" tabindex="0">
+                    <i class="fa-light fa-burger-lettuce"></i>
+                    <h6>رستوران</h6>
+                </div>
+            </div>
+        </div>
+        <div class="rezerv">
+            <h2>بیشترین رزروها</h2>
+            <div class="card">
+                <span>شمال</span>
+                <span>کیش</span>
+                <span>رامسر</span>
+                <span>نمک آبرود</span>
+            </div>
+        </div>
+    </div>
+    <!-- end responsive searchpage -->
+
+    <!-- start responsive menu -->
+    <div class="resmenu">
+        <div class="home" tabindex="0">
+            <i class="fa-solid fa-house"></i>
+            <h4>خانه</h4>
+        </div>
+        <div class="fav" tabindex="0">
+            <i class="fa-sharp fa-thin fa-message-heart"></i>
+            <h4>مورد علاقه ها</h4>
+        </div>
+        <div class="travel" tabindex="0">
+            <i class="fa-thin fa-earth-americas"></i>
+            <h4>سفرهای من</h4>
+        </div>
+        <div class="login" tabindex="0">
+            <i class="fa-thin fa-circle-user"></i>
+            <h4>ورود/ثبت نام</h4>
+        </div>
+    </div>
+    <!-- end responsive menu -->
+
+    <!-- start header -->
+    <div class="top w-100">
+        <div class="header mx-auto d-flex justify-content-between align-items-center">
+            <div class="logo w-25">
+                <img src="../assets/picture/آشیانه.png" alt="no image" />
+            </div>
+            <div class="menu w-50">
+                <nav class="w-100">
+                    <ul class="w-100 d-flex justify-content-evenly align-items-center"></ul>
+                </nav>
+            </div>
+            <div class="login w-25 d-flex justify-content-start align-items-center">
+                <span id="login" class="w-50 me-auto d-flex justify-content-evenly align-items-center">
+                    <span class="w-25 d-flex align-items-center justify-content-center">
+                        <i class="fa-thin fa-circle-user d-flex align-items-center justify-content-center"></i>
+                    </span>
+                    <h6 class="w-75">ورود/ثبت نام</h6>
+                </span>
+            </div>
+        </div>
+
+        <!-- start modal -->
+        <div class="overlay">
+            <div class="login d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-light fa-square-xmark" id="close"></i>
+                <h1>ورود یا ثبت نام</h1>
+                <h3>برای ادامه شماره موبایل خود را وارد کنید.</h3>
+                <h5 class="w-75">شماره موبایل</h5>
+                <input type="tel" placeholder="09" class="w-75" id="num" name="phonenumber" />
+                <div class="w-75 d-flex flex-wrap align-items-center justify-content-center">
+                    <h6 class="one">ورود و ثبت نام در آشیانه به منزله پذیرفتن</h6>
+                    <h6 class="two">قوانین و مقررات و</h6>
+                    <h6 class="three">قوانین حریم خصوصی</h6>
+                    <h6 class="four">میباشد.</h6>
+                </div>
+                <button id="button" disabled>ادامه</button>
+            </div>
+
+            <div class="sms flex-column align-items-center justify-content-center">
+                <i class="fa-light fa-square-xmark" id="x"></i>
+                <h1>کد تایید را وارد کنید</h1>
+                <h3>کد پنج رقمی ارسال شده به شماره زیر را وارد کنید.</h3>
+                <span class="d-flex justify-content-center align-items-evenly">
+                    <p id="shownum"></p>
+                    <a href="">ویرایش شماره</a>
+                </span>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="code d-flex justify-content-evenly align-items-center">
+                        <input type="text" maxlength="1" inputmode="numeric" name="one" />
+                        <input type="text" maxlength="1" inputmode="numeric" name="two" />
+                        <input type="text" maxlength="1" inputmode="numeric" name="three" />
+                        <input type="text" maxlength="1" inputmode="numeric" name="four" />
+                        <input type="text" maxlength="1" inputmode="numeric" name="five" />
+                    </div>
+                    <span class="d-flex justify-content-center align-items-center">
+                        <p id="timer">1:30</p>
+                        <p class="text">تا ارسال مجدد کد</p>
+                    </span>
+                </div>
+
+                <button id="btn" disabled>تایید</button>
+            </div>
+        </div>
+        <!-- end modal -->
+
+        <div class="searchbar mx-auto justify-content-evenly align-items-center">
+            <div class="city d-flex justify-content-center align-items-center my-3">
+                <a href="" class="city2">
+                    <h3>جستجو شهر ، استان یا اقامتگاه</h3>
+                    <h5>تهران</h5>
+                </a>
+            </div>
+            <div class="date d-flex justify-content-center align-items-center px-5 my-3">
+                <a href="" class="tarikh">
+                    <h3>تاریخ ورود و خروج</h3>
+                    <h5>انتخاب کنید</h5>
+                </a>
+            </div>
+            <div class="peoplenum d-flex justify-content-center align-items-center my-3">
+                <a href="" class="num">
+                    <h3>تعداد نفرات</h3>
+                    <h5></h5>
+                </a>
+                <div class="search">
+                    <a href="" class="d-flex align-items-center justify-content-center text-decoration-none">
+                        <i class="fa-thin fa-magnifying-glass d-flex align-items-center justify-content-center"></i>
+                        <span>جستجو</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- start searchcity modal -->
+        <div id="searchcity">
+            <div id="citymodal" class="d-flex flex-column justify-content-evenly align-items-center">
+                <div class="all d-flex flex-column justify-content-center">
+                    <h3>همه نتایج</h3>
+                    <div class="shahr d-flex justify-content-between align-items-center">
+                        <div class="right d-flex justify-content-evenly align-items-center">
+                            <i class="fa-sharp fa-light fa-bullseye-arrow"></i>
+                            <span class="text d-flex">
+                                <h6 class="ramsar">رامسر |</h6>
+                                <h6 class="ostan">استان مازندران</h6>
+                            </span>
+                        </div>
+                        <div class="left">
+                            <h6>1165 اقامتگاه</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="daste d-flex flex-column justify-content-center">
+                    <h3>دسته بندی اقامتگاه ها</h3>
+                    <div class="villa d-flex justify-content-between align-items-center">
+                        <div class="right d-flex justify-content-evenly align-items-center">
+                            <i class="fa-sharp fa-light fa-receipt"></i>
+                            <h6>ویلاهای رامسر</h6>
+                        </div>
+                        <div class="left">677 اقامتگاه</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end searchcity modal -->
+
+        <!-- start date modal -->
+        <div id="back">
+            <div id="datemodal">
+                <div class="text d-flex justify-content-between align-items-center">
+                    <i class="fa-light fa-arrow-right"></i>
+                    <h2 class="one">تاریخ</h2>
+                    <h2 class="two">پاک کردن</h2>
+                </div>
+                <div class="calendar w-100 d-flex justify-content-evenly align-items-center">
+                    <input data-jdp data-jdp-container="#datemodal" name="vrodtaghvim" class="vrod" />
+                    <button id="btnvrod">تاریخ ورود</button>
+                    <input data-jdp data-jdp-container="#datemodal" name="khrogtaghvim" class="khrog" />
+                    <button id="btnkhrog">تاریخ خروج</button>
+                </div>
+                <div class="date d-flex justify-content-evenly align-items-center">
+                    <div class="vrod d-flex flex-column justify-content-center align-items-start">
+                        <h4 class="datevrod">تاریخ ورود</h4>
+                        <h4 class="datevrod1" id="datevrod1">انتخاب کنید</h4>
+                    </div>
+                    <div class="khrog d-flex flex-column justify-content-center align-items-start">
+                        <h4 class="datekhrog">تاریخ خروج</h4>
+                        <h4 class="datekhrog1" id="datekhrog1">انتخاب کنید</h4>
+                    </div>
+                    <div class="buttons">
+                        <button class="clear">پاک کردن</button>
+                        <button class="edame">ادامه</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end date modal -->
+
+        <!-- start peoplenum modal -->
+        <div class="backpeople">
+            <div class="peoplemodal d-flex  flex-column justify-content-start align-items-center">
+                <div class="text">
+                    <i class="fa-light fa-arrow-right"></i>
+                    <h2>تعداد نفرات</h2>
+                </div>
+                <div class="adult d-flex justify-content-between align-items-center">
+                    <div class="right d-flex flex-column justify-content-start align-items-center">
+                        <h4 class="adult w-100 d-flex justify-content-start align-items-center">بزرگسال</h4>
+                        <p class="adult w-100 d-flex justify-content-start align-items-center">13 سال و بالای 13 سال
+                        </p>
+                    </div>
+                    <div class="left d-flex justify-content-center align-items-center">
+                        <i class="minad fa-light fa-circle-minus"></i>
+                        <span class="numad">0</span>
+                        <i class="maxad plus fa-light fa-circle-plus"></i>
+                    </div>
+                </div>
+                <div class="kids d-flex justify-content-between align-items-center">
+                    <div class="right d-flex flex-column justify-content-start align-items-center">
+                        <h4 class="kids w-100 d-flex justify-content-start align-items-center">کودک</h4>
+                        <p class="kids w-100 d-flex justify-content-start align-items-center">2 - 12 سال</p>
+                    </div>
+                    <div class="left d-flex justify-content-center align-items-center">
+                        <i class="minkids fa-light fa-circle-minus"></i>
+                        <span class="numkids">0</span>
+                        <i class="maxkids plus fa-light fa-circle-plus"></i>
+                    </div>
+                </div>
+                <div class="baby d-flex justify-content-between align-items-center">
+                    <div class="right d-flex flex-column justify-content-start align-items-center">
+                        <h4 class="baby w-100 d-flex justify-content-start align-items-center">نوزاد</h4>
+                        <p class="baby w-100 d-flex justify-content-start align-items-center">زیر 2 سال</p>
+                    </div>
+                    <div class="left d-flex justify-content-center align-items-center">
+                        <i class="minbaby fa-light fa-circle-minus"></i>
+                        <span class="numbaby">0</span>
+                        <i class="maxbaby plus fa-light fa-circle-plus"></i>
+                    </div>
+                </div>
+                <button>جستجو</button>
+            </div>
+        </div>
+        <!-- end peoplenum modal -->
+
+        <div id="searchbar1" class="searchbar1 mx-auto justify-content-evenly align-items-center">
+            <div class="maghsad d-flex justify-content-center align-items-center px-4">
+                <a href="" class="city2 city1">
+                    <h3>انتخاب مقصد</h3>
+                </a>
+            </div>
+            <div class="date d-flex justify-content-center align-items-center px-4">
+                <a href="" class="tarikh forcemenu">
+                    <h3>تاریخ ورود و خروج</h3>
+                </a>
+            </div>
+            <div class="peoplenum d-flex justify-content-center align-items-center px-4">
+                <a href="" class="num num1">
+                    <h3>تعداد نفرات</h3>
+                </a>
+            </div>
+            <div class="search">
+                <a href="" class="text-decoration-none"><i
+                        class="fa-thin fa-magnifying-glass d-flex align-items-center justify-content-center"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+
+    <!-- start vrod modal -->
+    <div class="backvrod">
+        <div class="vrodmodal d-flex flex-column justify-content-evenly align-items-center">
+            <img src="../assets/picture/آشیانه.png" alt="no image" />
+            <h2>ورود یا ثبت‌نام در آشیانه</h2>
+            <h4>برای ورود به آشیانه شماره همراه خود را وارد کنید.</h4>
+            <input type="text" placeholder="09xxxxxxxxx" id="vrodnum" name="login" />
+            <div class="btn d-flex flex-column">
+                <button class="edame">ادامه</button>
+                <button class="bastn">بستن</button>
+            </div>
+        </div>
+    </div>
+    <!-- end vrod modal -->
+
+    <!-- start responsive all -->
+    <div class="resall">
+        <h2 class="top">همه ی اقامتگاه ها</h2>
+        <div class="bottom">
+            <h4 class="right">4255 اقامتگاه</h4>
+            <div class="left">
+                <i class="fa-duotone fa-light fa-bars-filter"></i>
+                <h4>مرتب سازی</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end responsive all -->
+
+    <!-- start filter -->
+    <div class="filter dastebar w-100 justify-content-evenly align-items-center">
+        <div class="previousbutton">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="popular" tabindex="0">
+            <i class="fa-light fa-heart-circle-check"></i>
+            <h6>محبوب ترینها</h6>
+        </div>
+        <div class="rezerv" tabindex="0">
+            <i class="fa-light fa-chart-line"></i>
+            <h6>بیشترین رزرو</h6>
+        </div>
+        <div class="villa" tabindex="0">
+            <i class="fa-light fa-buildings"></i>
+            <h6>ویلا</h6>
+        </div>
+        <div class="apartment" tabindex="0">
+            <i class="fa-light fa-apartment"></i>
+            <h6>آپارتمان</h6>
+        </div>
+        <div class="boom" tabindex="0">
+            <i class="fa-light fa-tree-city"></i>
+            <h6>بومگردی</h6>
+        </div>
+        <div class="shop" tabindex="0">
+            <i class="fa-light fa-cart-shopping"></i>
+            <h6>مرکز خرید</h6>
+        </div>
+        <div class="sports" tabindex="0">
+            <i class="fa-light fa-sneaker-running"></i>
+            <h6>ورزشی</h6>
+        </div>
+        <div class="pilgrimage" tabindex="0">
+            <i class="fa-light fa-mosque"></i>
+            <h6>زیارتی</h6>
+        </div>
+        <div class="historical" tabindex="0">
+            <i class="fa-light fa-landmark-magnifying-glass"></i>
+            <h6>تاریخی</h6>
+        </div>
+        <div class="trend" tabindex="0">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <h6>ترندها</h6>
+        </div>
+        <div class="resturan" tabindex="0">
+            <i class="fa-light fa-burger-lettuce"></i>
+            <h6>رستوران</h6>
+        </div>
+        <div class="nextbutton">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="filterbutton d-flex justify-content-evenly align-items-center">
+            <i class="fa-solid fa-sliders"></i>
+            <h6>فیلتر</h6>
+            <span class="filtercount align-items-center justify-content-center">0</span>
+        </div>
+    </div>
+    <!-- end filter -->
+
+    <!-- start filtermodal -->
+    <div class="backfilter">
+        <div class="filtermodal d-flex justify-content-evenly align-items-center">
+            <div class="right d-flex flex-column">
+                <div class="text">
+                    <i class="fa-light fa-arrow-right"></i>
+                    <h2>فیلتر ها</h2>
+                </div>
+                <div class="one w-100 d-flex justify-content-between align-items-center">
+                    <div class="right d-flex flex-column justify-content-right">
+                        <h3>تعداد اتاق ها</h3>
+                        <h5>مهم نیست</h5>
+                    </div>
+                    <div class="left d-flex justify-content-center align-items-center">
+                        <i class="min fa-light fa-circle-minus"></i>
+                        <span class="num">0</span>
+                        <i class="max plus fa-light fa-circle-plus"></i>
+                    </div>
+                </div>
+                <div class="two w-100 d-flex flex-column">
+                    <div class="text w-100 d-flex justify-content-right">
+                        <h3>قیمت برای هر شب</h3>
+                    </div>
+                    <div class="price w-100 d-flex flex-column justify-content-center align-items-center">
+                        <div class="text d-flex">
+                            <h5 class="az">از 0 تومان</h5>
+                            <h5 class="ta"> تا 20000000 تومان</h5>
+                        </div>
+                        <div id="range" class="range d-flex justify-content-center align-items-center">
+                            <span class="line"></span>
+                            <span class="circle1"></span>
+                            <span class="circle2"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="three d-flex flex-column">
+                    <h3>شهر اقامتگاه</h3>
+                    <div class="gheshm d-flex">
+                        <label for="gheshm">قشم</label>
+                        <input type="radio" name="safar" id="ghashm" />
+                    </div>
+                    <div class="hormoz d-flex">
+                        <label for="hormoz">هرمز</label>
+                        <input type="radio" name="safar" id="hormoz" />
+                    </div>
+                    <div class="dargahan d-flex">
+                        <label for="dargahan">درگهان</label>
+                        <input type="radio" name="safar" id="dargahan" />
+                    </div>
+                    <div class="hengam d-flex">
+                        <label for="hengam">هنگام</label>
+                        <input type="radio" name="safar" id="hengam" />
+                    </div>
+                </div>
+                <div class="four d-flex flex-column">
+                    <h3>نوع اقامتگاه</h3>
+                    <div class="boom d-flex">
+                        <label for="boom">بوم گردی</label>
+                        <input type="checkbox" name="boom" id="boom" />
+                    </div>
+                    <div class="apartman d-flex">
+                        <label for="apartman">آپارتمان</label>
+                        <input type="checkbox" name="apartman" id="apartman" />
+                    </div>
+                    <div class="sonati d-flex">
+                        <label for="sonati">سنتی</label>
+                        <input type="checkbox" name="sonati" id="sonati" />
+                    </div>
+                    <div class="mosafer d-flex">
+                        <label for="mosafer">مسافرخانه</label>
+                        <input type="checkbox" name="mosafer" id="mosafer" />
+                    </div>
+                    <a href="">نمایش بیشتر</a>
+                </div>
+                <div class="five d-flex flex-column">
+                    <h3>نوع منطقه</h3>
+                    <div class="shahri d-flex">
+                        <label for="shahri">شهری</label>
+                        <input type="checkbox" name="shahri" id="shahri" />
+                    </div>
+                    <div class="saheli d-flex">
+                        <label for="saheli">ساحلی</label>
+                        <input type="checkbox" name="saheli" id="saheli" />
+                    </div>
+                    <div class="rosta d-flex">
+                        <label for="mosafer">روستایی</label>
+                        <input type="checkbox" name="rosta" id="rosta" />
+                    </div>
+                    <div class="kavir d-flex">
+                        <label for="kavir">کویری</label>
+                        <input type="checkbox" name="kavir" id="kavir" />
+                    </div>
+                    <div class="jangal d-flex">
+                        <label for="jangal">جنگلی</label>
+                        <input type="checkbox" name="jangal" id="jangal" />
+                    </div>
+                </div>
+            </div>
+            <div class="left d-flex flex-column">
+                <i class="fa-light fa-square-xmark" id="close"></i>
+                <div class="all w-100 d-flex flex-column">
+                    <div class="one d-flex flex-column">
+                        <h3>امتیاز اقامتگاه</h3>
+                        <div class="btns d-flex">
+                            <div class="one">4 تا 5</div>
+                            <div class="two">3 تا 4</div>
+                            <div class="three">2 تا 3</div>
+                            <div class="four">پایینتر از 2</div>
+                        </div>
+                    </div>
+                    <div class="two d-flex flex-column">
+                        <h3>نوع منطقه</h3>
+                        <div class="barbikio d-flex">
+                            <label for="barbikio">باربیکیو</label>
+                            <input type="checkbox" name="barbikio" id="barbikio" />
+                        </div>
+                        <div class="estakhr d-flex">
+                            <label for="estakhr">استخر</label>
+                            <input type="checkbox" name="estakhr" id="estakhr" />
+                        </div>
+                        <div class="biliard d-flex">
+                            <label for="biliard">میز بیلیارد</label>
+                            <input type="checkbox" name="biliard" id="biliard" />
+                        </div>
+                        <div class="jakozi d-flex">
+                            <label for="jakozi">جکوزی</label>
+                            <input type="checkbox" name="jakozi" id="jakozi" />
+                        </div>
+                        <a href="">نمایش بیشتر</a>
+                    </div>
+                    <div class="three d-flex flex-column">
+                        <h3>نوع منطقه</h3>
+                        <div class="sarma d-flex">
+                            <label for="sarma">سیستم سرمایشی</label>
+                            <input type="checkbox" name="sarma" id="sarma" />
+                        </div>
+                        <div class="tv d-flex">
+                            <label for="tv">تلویزیون</label>
+                            <input type="checkbox" name="tv" id="tv" />
+                        </div>
+                        <div class="yakhchal d-flex">
+                            <label for="yakhchal">یخچال</label>
+                            <input type="checkbox" name="yakhchal" id="yakhchal" />
+                        </div>
+                        <div class="mobl d-flex">
+                            <label for="mobl">مبلمان</label>
+                            <input type="checkbox" name="mobl" id="mobl" />
+                        </div>
+                        <a href="">نمایش بیشتر</a>
+                    </div>
+                    <div class="four d-flex flex-column">
+                        <h3>نوع منطقه</h3>
+                        <div class="hamam d-flex">
+                            <label for="hamam">حمام</label>
+                            <input type="checkbox" name="hamam" id="hamam" />
+                        </div>
+                        <div class="balcon d-flex">
+                            <label for="balcon">بالکن</label>
+                            <input type="checkbox" name="balcon" id="balcon" />
+                        </div>
+                        <div class="wcf d-flex">
+                            <label for="wcf">سرویس بهداشتی فرنگی</label>
+                            <input type="checkbox" name="wcf" id="wcf" />
+                        </div>
+                        <div class="wci d-flex">
+                            <label for="wci">سرویس بهداشتی ایرانی</label>
+                            <input type="checkbox" name="wci" id="wci" />
+                        </div>
+                        <a href="">نمایش بیشتر</a>
+                    </div>
+                    <div class="five d-flex flex-column">
+                        <h3>مقررات اقامتگاه</h3>
+                        <div class="party d-flex">
+                            <label for="party">امکان برگزاری مراسم و مهمانی</label>
+                            <input type="checkbox" name="party" id="party" />
+                        </div>
+                        <div class="animal d-flex">
+                            <label for="animal">امکان ورود حیوانات خانگی</label>
+                            <input type="checkbox" name="animal" id="animal" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end filtermodal -->
+
+    <!-- start cards -->
+    <div class="cardcontaner w-100 flex-wrap justify-content-center align-items-start">
+
+    </div>
+    <!-- end cards -->
+
+    <!-- start mahsol -->
+    <div class="mahsol flex-column">
+        <div class="swipers">
+            <i class="fa-light fa-arrow-right"></i>
+            <div class="icon">
+                <i class="fa-thin fa-heart"></i>
+                <i class="fa-sharp fa-thin fa-share-nodes"></i>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../assets/picture/a3fcc37c1a5bf95b67d497c848ec5e88287ff6d8.jpg" alt="no image" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/picture/0608d3a9a3933737199dd0bfa638b7c48e4ccf96.jpg" alt="no image" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/picture/41bb9498fa03d165b85677a849ac9691bb971b09.jpg" alt="no image" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/picture/68fdf9d68f55501541d55a11dd2dcbb95b736a77.jpg" alt="no image" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="top d-flex">
+            <div class="ejare d-flex flex-column">
+                <h2 class="text">اجاره روزانه آپارتمان یک خوابه دولت ۴۵ تهران</h2>
+                <div class="icon d-flex">
+                    <div class="star d-flex">
+                        <i class="fa-solid fa-star"></i>
+                        <h4>4.6 (58 نظر ثبت شده)</h4>
+                    </div>
+                    <div class="loc d-flex">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <h4>استان تهران، تهران</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="share d-flex">
+                <div class="shareicon d-flex">
+                    <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                    <h4>اشتراک گذاری</h4>
+                </div>
+                <div class="hearticon d-flex">
+                    <i class="fa-thin fa-heart"></i>
+                    <h4>اشتراک گذاری</h4>
+                </div>
+            </div>
+        </div>
+        <div class="img d-flex">
+            <img src="../assets/picture/a3fcc37c1a5bf95b67d497c848ec5e88287ff6d8.jpg" alt="no image" />
+            <div class="left d-flex flex-column">
+                <div class="top d-flex">
+                    <img src="../assets/picture/68fdf9d68f55501541d55a11dd2dcbb95b736a77.jpg" alt="no image" />
+                    <img src="../assets/picture/41bb9498fa03d165b85677a849ac9691bb971b09.jpg" alt="no image" />
+                </div>
+                <div class="bottom d-flex">
+                    <img src="../assets/picture/0608d3a9a3933737199dd0bfa638b7c48e4ccf96.jpg" alt="no image" />
+                    <div class="btn d-flex justify-content-center align-items-center">
+                        <button class="btn d-flex justify-content-center align-items-center">
+                            <h4>مشاهده همه</h4>
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom d-flex">
+            <div class="right d-flex flex-column">
+                <div class="one d-flex flex-column">
+                    <h2>آپارتمان</h2>
+                    <h4>اجاره آپارتمان در تهران به میزبانی مائده علیخوانی</h4>
+                </div>
+                <div class="two d-flex flex-column">
+                    <div class="top d-flex">
+                        <i class="fa-thin fa-badge-dollar"></i>
+                        <div class="left d-flex flex-column">
+                            <h2>لغو رزرو بدون جریمه</h2>
+                            <h4>امکان لغو رزر از سمت مهمان تا ۱۰ روز قبل از شروع سفر فقط در تعطیلات و روزهای پر
+                                تقاضا
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="bottom d-flex">
+                        <i class="fa-sharp fa-thin fa-bolt"></i>
+                        <div class="left d-flex flex-column">
+                            <h2>رزرو آنی و قطعی با آشیانه</h2>
+                            <h4>برای رزرو نهایی این آپارتمان نیازی به تایید از سمت میزبان نخواهید داشت و رزرو شما
+                                قطعی و
+                                خواهد بود.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="three d-flex flex-column">
+                    <h2>مشخصات کلی آپارتمان</h2>
+                    <div class="about d-flex">
+                        <i class="fa-light fa-house"></i>
+                        <div class="left d-flex flex-column">
+                            <h2>درباره آپارتمان</h2>
+                            <h4>۴۵ متر زیربنا، طبقه -۱، ۷ پله</h4>
+                        </div>
+                    </div>
+                    <div class="zarfiat d-flex">
+                        <i class="fa-light fa-users"></i>
+                        <div class="left d-flex flex-column">
+                            <h2>ظرفیت</h2>
+                            <h4>ظرفیت تا ۴ نفر (۲ نفر پایه + تا ۲ نفر اضافه)</h4>
+                        </div>
+                    </div>
+                    <div class="room d-flex">
+                        <i class="fa-light fa-bed-front"></i>
+                        <div class="left d-flex flex-column">
+                            <h2>سرویس‌های خواب</h2>
+                            <h4>۱ اتاق، ۱ تخت دونفره، تخت یک نفره ندارد، رخت‌خواب سنتی ندارد</h4>
+                        </div>
+                    </div>
+                    <div class="wc d-flex">
+                        <i class="fa-light fa-toilet-paper-under"></i>
+                        <div class="left d-flex flex-column">
+                            <h2>سرویس‌های بهداشتی</h2>
+                            <h4>۱ سرویس ایرانی، سرویس فرهنگی ندارد، ۱ حمام</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="four d-flex flex-column">
+                    <h2>توضیحات آپارتمان</h2>
+                    <p>قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه در طبقه زیر همکف
+                        و
+                        دارای 7 پله به سمت پایین می باشد. آپارتمان در شهر تهران (بلوار کاوه) واقع شده است. دسترسی به
+                        (بلوار کاوه) از فرد امکان پذیر است. اقامتگاه در محیطی آرام آپارتمانی و غیر بومی واقع است.
+                        آپارتمان دربست است. اقامتگاه فاقد پارکینگ و آسانسور است. بافت محله آپارتمان شهری و دسترسی به
+                        اقامتگاه آسفالت می باشد.</p>
+                    <div class="vrod d-flex">
+                        <h2>ساعت ورود:</h2>
+                        <h4>۰۲:۰۰ (بعد از ظهر)</h4>
+                    </div>
+                    <div class="khrog d-flex">
+                        <h2>ساعت خروج:</h2>
+                        <h4>۱۲:۰۰ (ظهر)</h4>
+                    </div>
+                </div>
+                <div class="five d-flex flex-column">
+                    <h2>امکانات مهم آپارتمان</h2>
+                    <div class="table d-flex">
+                        <div class="one d-flex flex-column">
+                            <h3>امکانات رفاهی</h3>
+                            <div class="h4 d-flex flex-column">
+                                <h4>آنتن‌دهی موبایل</h4>
+                                <h4>سیستم سرمایشی</h4>
+                                <h4>سیستم گرمایشی</h4>
+                                <h4>مبلمان</h4>
+                                <h4>آب</h4>
+                                <h4>برق</h4>
+                                <h4>گاز</h4>
+                                <h4>گیرنده دیجیتال</h4>
+                                <h4>جالباسی</h4>
+                            </div>
+                        </div>
+                        <div class="two d-flex flex-column">
+                            <h3>امکانات بهداشتی</h3>
+                            <div class="h4 d-flex flex-column">
+                                <h4>سرویس بهداشتی ایرانی</h4>
+                                <h4>حمام</h4>
+                                <h4>سیستم گرمایشی</h4>
+                                <h4>مبلمان</h4>
+                                <h4>آب</h4>
+                                <h4>برق</h4>
+                            </div>
+                        </div>
+                        <div class="three d-flex flex-column">
+                            <h3>امکانات آشپزخانه</h3>
+                            <div class="h4 d-flex flex-column">
+                                <h4>لوازم سرو غذا</h4>
+                                <h4>اجاق گاز</h4>
+                                <h4>یخچال</h4>
+                                <h4>کابینت</h4>
+                            </div>
+                        </div>
+                        <div class="four d-flex flex-column">
+                            <h3>امکاناتی که فراهم نیست</h3>
+                            <div class="h4 d-flex flex-column">
+                                <h4>سرویس بهداشتی فرهنگی</h4>
+                                <h4>پارکینگ</h4>
+                                <h4>وسایل پخت و پز</h4>
+                                <h4>استخر</h4>
+                                <h4>تلویزیون</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="six d-flex flex-column">
+                    <h2>تاریخ رزرو انتخاب نشده ‌‌است</h2>
+                    <h4>لطفا روز ورود را انتخاب کنید</h4>
+                    <div class="date d-flex">
+                        <input data-jdp type="text" id="vrod" name="vrod" />
+                        <button class="vrod">تاریخ ورود</button>
+                        <input data-jdp type="text" id="khrog" name="khrog" />
+                        <button class="khrog">تاریخ خروج</button>
+                    </div>
+                    <div class="showdate d-flex">
+                        <div class="vrod d-flex flex-column">
+                            <h4 class="datevrod">تاریخ ورود</h4>
+                            <h4 class="datevrod1" id="datevrod1">انتخاب کنید</h4>
+                        </div>
+                        <div class="khrog d-flex flex-column">
+                            <h4 class="datekhrog">تاریخ خروج</h4>
+                            <h4 class="datekhrog1" id="datekhrog1">انتخاب کنید</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="seven d-flex flex-column">
+                    <h2>موقعیت مکانی</h2>
+                    <h4>تهران، بلوار ازادی، کوچه سعادت ۶، پلاک ۱۳</h4>
+                    <div class="map">
+                        <i class="fa-solid fa-map-pin"></i>
+                        <img src="../assets/picture/9094208723772a6acb95a753dc33eb9dc60617e0.png" alt="no image" />
+                    </div>
+                </div>
+                <div class="eight d-flex flex-column">
+                    <h2>قوانین و مقررات</h2>
+                    <div class="rules d-flex">
+                        <div class="right d-flex">
+                            <i class="fa-thin fa-circle-info"></i>
+                            <div class="text d-flex flex-column">
+                                <h2>قوانین لغو رزرو</h2>
+                                <h4>مشاهده دقیق جزئیات لغو رزرو آپارتمان</h4>
+                                <div class="tozih d-flex">
+                                    <h4>توضیحات بیشتر</h4>
+                                    <i class="fa-thin fa-angle-left"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left d-flex flex-column">
+                            <div class="top d-flex">
+                                <i class="fa-thin fa-clipboard-list-check"></i>
+                                <h2>قوانین لغو رزرو</h2>
+                            </div>
+                            <div class="one d-flex">
+                                <i class="fa-light fa-check"></i>
+                                <h4>استعمال دخانیات مجاز است.</h4>
+                            </div>
+                            <div class="two d-flex">
+                                <i class="fa-light fa-check"></i>
+                                <h4>پذیرش ۲۴ ساعته مهمان</h4>
+                            </div>
+                            <div class="three d-flex">
+                                <i class="fa-light fa-check"></i>
+                                <h4>پذیرش گروه‌های مجردی (فقط آقایان یا خانم ها) فراهم است.</h4>
+                            </div>
+                            <div class="four d-flex">
+                                <i class="fa-light fa-check"></i>
+                                <h4>همراه داشتن کارت ملی الزامی است.</h4>
+                            </div>
+                            <div class="five d-flex">
+                                <i class="fa-light fa-xmark"></i>
+                                <h4>ورود حیوانات خانگی مجاز نیست.</h4>
+                            </div>
+                            <div class="six d-flex">
+                                <i class="fa-light fa-xmark"></i>
+                                <h4>ورود حیوانات خانگی مجاز نیست.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nine d-flex flex-column">
+                    <div class="score d-flex">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <h2>امتیاز کلی اقامتگاه ۴.۶ از ۵ (58 نظر ثبت شده)</h2>
+                    </div>
+                    <div class="cardcontainer d-flex flex-wrap">
+                        <div class="card d-flex flex-column justify-content-start">
+                            <div class="name d-flex">
+                                <span class="d-flex justify-content-center align-items-center">ع</span>
+                                <div class="fname d-flex flex-column">
+                                    <h2>علی</h2>
+                                    <h4>اقامت ۱ روز پیش</h4>
+                                </div>
+                            </div>
+                            <div class="star d-flex">
+                                <div class="stars d-flex">
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                </div>
+                                <h4>۳ شب اقامت در اقامتگاه</h4>
+                            </div>
+                            <h2 class="text">خوب بود</h2>
+                        </div>
+                        <div class="card d-flex flex-column justify-content-start">
+                            <div class="name d-flex">
+                                <span class="d-flex justify-content-center align-items-center">ه</span>
+                                <div class="fname d-flex flex-column">
+                                    <h2>هستی</h2>
+                                    <h4>اقامت ۵ روز پیش</h4>
+                                </div>
+                            </div>
+                            <div class="star d-flex">
+                                <div class="stars d-flex">
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                </div>
+                                <h4>۱ شب اقامت در اقامتگاه</h4>
+                            </div>
+                            <h2 class="text">از میزبان محارم کمال تشکر رو دارم به خاطر اینکه با صبر و حوصله پاسخگوی
+                                ما
+                                بودن تا برسیم اقامتگاه داخل اقامتگاه بسیار تمیز بود و از همه چیز مهمتر... این بود که
+                                گرمایش عالی بود...</h2>
+                        </div>
+                        <div class="card d-flex flex-column justify-content-start">
+                            <div class="name d-flex">
+                                <span class="d-flex justify-content-center align-items-center">ا</span>
+                                <div class="fname d-flex flex-column">
+                                    <h2>ارش</h2>
+                                    <h4>اقامت ۸ روز پیش</h4>
+                                </div>
+                            </div>
+                            <div class="star d-flex">
+                                <div class="stars d-flex">
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                </div>
+                                <h4>۱ شب اقامت در اقامتگاه</h4>
+                            </div>
+                            <h2 class="text">کیفیت بد و کثیف سوییت و عدم گرمایش کلی</h2>
+                        </div>
+                        <div class="card d-flex flex-column justify-content-start">
+                            <div class="name d-flex">
+                                <span class="d-flex justify-content-center align-items-center">م</span>
+                                <div class="fname d-flex flex-column">
+                                    <h2>مهران</h2>
+                                    <h4>اقامت ۱۰ روز پیش</h4>
+                                </div>
+                            </div>
+                            <div class="star d-flex">
+                                <div class="stars d-flex">
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-thin fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                </div>
+                                <h4>۱ شب اقامت در اقامتگاه</h4>
+                            </div>
+                            <h2 class="text">بسیار کثیف با وسایل مستهلک با آنتن دهی صفر</h2>
+                        </div>
+                    </div>
+                    <button class="d-flex">
+                        <h4>مشاهده همه نظرات</h4>
+                        <i class="fa-thin fa-angle-left"></i>
+                    </button>
+                </div>
+                <div class="ten d-flex flex-column">
+                    <h2>آپارتمان‌های مشابه</h2>
+                    <div class="cardcontainer d-flex">
+                        <div class="card d-flex flex-column">
+                            <img src="../assets/picture/62ff7127a66f95977aa2b7c9b2a8c1f062f1af08.png" alt="no image" />
+                            <i class="fa-solid fa-heart"></i>
+                            <div class="text d-flex flex-column align-items-start">
+                                <div class="star d-flex">
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <h5>4.6(58 نظر ثبت شده)</h5>
+                                </div>
+                                <h2>کلبه چوبی در مازندران</h2>
+                                <h4>استان مازندران، رامسر، 1 اتاق. دو نفر پایه + 2 نفر اضافه</h4>
+                                <div class="price d-flex">
+                                    <h4>شروع قیمت:</h4>
+                                    <h4 class="num">2,960,000 تومان</h4>
+                                    <h4>/هرشب</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-column">
+                            <img src="../assets/picture/62ff7127a66f95977aa2b7c9b2a8c1f062f1af08.png" alt="no image" />
+                            <i class="fa-solid fa-heart"></i>
+                            <div class="text d-flex flex-column align-items-start">
+                                <div class="star d-flex">
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <h5>4.6(58 نظر ثبت شده)</h5>
+                                </div>
+                                <h2>کلبه چوبی در مازندران</h2>
+                                <h4>استان مازندران، رامسر، 1 اتاق. دو نفر پایه + 2 نفر اضافه</h4>
+                                <div class="price d-flex">
+                                    <h4>شروع قیمت:</h4>
+                                    <h4 class="num">2,960,000 تومان</h4>
+                                    <h4>/هرشب</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card d-flex flex-column">
+                            <img src="../assets/picture/62ff7127a66f95977aa2b7c9b2a8c1f062f1af08.png" alt="no image" />
+                            <i class="fa-solid fa-heart"></i>
+                            <div class="text d-flex flex-column align-items-start">
+                                <div class="star d-flex">
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <h5>4.6(58 نظر ثبت شده)</h5>
+                                </div>
+                                <h2>کلبه چوبی در مازندران</h2>
+                                <h4>استان مازندران، رامسر، 1 اتاق. دو نفر پایه + 2 نفر اضافه</h4>
+                                <div class="price d-flex">
+                                    <h4>شروع قیمت:</h4>
+                                    <h4 class="num">2,960,000 تومان</h4>
+                                    <h4>/هرشب</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left d-flex align-items-start">
+                <div class="rezervcard d-flex flex-column">
+                    <div class="one d-flex">
+                        <div class="text d-flex">
+                            <h2>شروع از: ۹۵۰,۰۰۰ تومان</h2>
+                            <h3>/ هرشب</h3>
+                        </div>
+                        <div class="star d-flex">
+                            <i class="fa-solid fa-star"></i>
+                            <h4>۳.۱(۱۹۶)</h4>
+                        </div>
+                    </div>
+                    <div class="two d-flex flex-column">
+                        <div class="top d-flex">
+                            <div class="right d-flex">
+                                <i class="fa-light fa-calendar"></i>
+                                <div class="text d-flex flex-column">
+                                    <h4>تاریخ خروج</h4>
+                                    <h4 class="date">۱۲ اسفند</h4>
+                                </div>
+                            </div>
+                            <div class="left d-flex">
+                                <i class="fa-light fa-calendar"></i>
+                                <div class="text d-flex flex-column">
+                                    <h4>تاریخ خروج</h4>
+                                    <h4 class="date">۱۲ اسفند</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom d-flex">
+                            <div class="right d-flex">
+                                <i class="fa-light fa-users"></i>
+                                <div class="text d-flex flex-column">
+                                    <h4>تاریخ خروج</h4>
+                                    <h4 class="date">۱۲ اسفند</h4>
+                                </div>
+                            </div>
+                            <div class="left d-flex">
+                                <i class="fa-light fa-square-plus"></i>
+                                <h2 id="num">0</h2>
+                                <i class="fa-light fa-square-minus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three d-flex flex-column">
+                        <button>ثبت رزرو</button>
+                        <h4>ارسال درخواست رزرو برای شما هزینه‌ای ندارد</h4>
+                    </div>
+                    <div class="four d-flex">
+                        <h3>۱ شب اقامت</h3>
+                        <h3>۹۵۰,۰۰۰ تومان</h3>
+                    </div>
+                    <div class="five d-flex">
+                        <h3>جمع مبلغ قابل پرداخت</h3>
+                        <h3>۹۵۰,۰۰۰ تومان</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end mahsol -->
+
+    <!-- start rezerv -->
+    <div class="rezervvilla">
+        <div class="right d-flex flex-column">
+            <div class="card">
+                <div class="top d-flex">
+                    <img src="../assets/picture/c09ccc80fcc2b71587a75c2c451f79cee2a54519.png" alt="no image" />
+                    <div class="text d-flex flex-column">
+                        <h2>کلبه یک خوابه سوئیسی اودین</h2>
+                        <h4>رشت، گیلان</h4>
+                    </div>
+                </div>
+                <div class="center d-flex flex-column">
+                    <h2>جزئیات پرداخت</h2>
+                    <div class="top d-flex">
+                        <h4>1 شب × 1.600.000 تومان</h4>
+                        <h4 class="num">1.600.000 تومان</h4>
+                    </div>
+                    <div class="center d-flex">
+                        <h4>نفرات اضافی (1 نفر × 1 شب)</h4>
+                        <h4 class="num">250.000 تومان</h4>
+                    </div>
+                    <div class="bottom d-flex">
+                        <h4>مالیات</h4>
+                        <h4 class="num">28.000 تومان</h4>
+                    </div>
+                </div>
+                <div class="bottom d-flex flex-column">
+                    <div class="text d-flex">
+                        <h4>جمع مبلغ قابل پرداخت :</h4>
+                        <h4 class="num">1.878.000 تومان</h4>
+                    </div>
+                    <button class="one">مشاهده صورت و پرداخت</button>
+                    <button class="two">انصراف</button>
+                </div>
+            </div>
+            <div class="call flex-column align-items-center">
+                <h4>در صورت داشتن سوال و مشکل، با ما تماس بگیرید.</h4>
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    <h5>021-452362514</h5>
+                </span>
+            </div>
+        </div>
+        <div class="left d-flex flex-column">
+            <div class="one d-flex flex-column">
+                <div class="range">
+                    <div class="circle1"></div>
+                    <div class="line1"></div>
+                    <div class="circle2"></div>
+                    <div class="line2"></div>
+                    <div class="circle3"></div>
+                </div>
+                <div class="text d-flex">
+                    <h3 class="sabt">ثبت درخواست</h3>
+                    <h3 class="taid">تایید میزبان</h3>
+                    <h3 class="pardakht">پرداخت</h3>
+                </div>
+            </div>
+            <div class="two d-flex">
+                <div class="right d-flex flex-column">
+                    <h4>تاریخ سفر</h4>
+                    <h2>27 بهمن - 29 بهمن</h2>
+                </div>
+                <div class="left d-flex align-items-center">
+                    <h4>ویرایش</h4>
+                    <i class="fa-sharp fa-solid fa-angle-left"></i>
+                </div>
+            </div>
+            <div class="three d-flex">
+                <div class="right d-flex flex-column">
+                    <h4>تعداد مسافران</h4>
+                    <h2>2 نفر + 1 نفر اضافه</h2>
+                </div>
+                <div class="left d-flex align-items-center">
+                    <h4>ویرایش</h4>
+                    <i class="fa-sharp fa-solid fa-angle-left"></i>
+                </div>
+            </div>
+            <div class="four d-flex flex-column">
+                <h2>اطلاعات مسافر</h2>
+                <div class="inputs d-flex flex-wrap">
+                    <input type="text" class="fname" placeholder="نام" name="first" />
+                    <input type="text" class="lname" placeholder="نام خانوادگی" name="last" />
+                    <input type="text" class="phonenum" placeholder="شماره موبایل" name="phon" />
+                </div>
+                <h4>نام و نام خانوادگی را دقیقا مطابق با کارت شناسایی وارد کنید.</h4>
+            </div>
+            <div class="five d-flex flex-column">
+                <h2>قوانین لغو</h2>
+                <div class="green d-flex">
+                    <h4 class="date">تا 8 اسفند:</h4>
+                    <h4>10 درصد مبلغ شب اول + 10 درصد مبلغ شب های باقیمانده</h4>
+                </div>
+                <div class="yellow d-flex">
+                    <h4 class="date">از 8 اسفند تا دوازده اسفند :</h4>
+                    <h4>50 درصد مبلغ شب اول + 20 درصد مبلغ شب های باقیمانده</h4>
+                </div>
+                <div class="pink d-flex">
+                    <h4 class="date">دوازدهم اسفند:</h4>
+                    <h4>100 درصد مبلغ شب های سپری شده + 50 درصد مبلغ شب های باقیمانده</h4>
+                </div>
+            </div>
+        </div>
+        <div class="pay flex-column">
+            <div class="one d-flex flex-column">
+                <div class="range">
+                    <div class="circle1"></div>
+                    <div class="line1"></div>
+                    <div class="circle2"></div>
+                    <div class="line2"></div>
+                    <div class="circle3"></div>
+                </div>
+                <div class="text d-flex">
+                    <h3 class="sabt">ثبت درخواست</h3>
+                    <h3 class="taid">تایید میزبان</h3>
+                    <h3 class="pardakht">پرداخت</h3>
+                </div>
+            </div>
+            <div class="two d-flex flex-column align-items-center">
+                <i class="fa-solid fa-square-check"></i>
+                <h2>در انتظار پرداخت</h2>
+                <h4>میزبان شما درخواست رزرو را تایید کرد. با توجه به مهلت پرداخت و امکان از دست دادن رزرو، به موقع
+                    پرداخت کنید.</h4>
+                <div class="timer d-flex">
+                    <span class="sec">00</span>
+                    <span class="dot">:</span>
+                    <span class="min">1</span>
+                    <span class="dot">:</span>
+                    <span class="hour">00</span>
+                </div>
+            </div>
+            <div class="three d-flex flex-column align-items-start">
+                <h2>تاریخ سفر</h2>
+                <h4>27 بهمن - 29 بهمن</h4>
+            </div>
+            <div class="four d-flex flex-column align-items-start">
+                <h2>تعداد مسافران</h2>
+                <h4>2 نفر + 1 نفر اضافه</h4>
+            </div>
+            <div class="five d-flex flex-column align-items-start">
+                <h2>اطلاعات مسافر</h2>
+                <div class="info d-flex">
+                    <h4 class="name"></h4>
+                    <h4 class="num"></h4>
+                </div>
+            </div>
+            <div class="six d-flex">
+                <h4>اگر کد تخفیف دارید وارد کنید.</h4>
+                <i class="fa-solid fa-square-caret-left"></i>
+            </div>
+            <div class="seven d-flex flex-column">
+                <h2>قوانین لغو</h2>
+                <div class="green d-flex">
+                    <h4 class="date">تا 8 اسفند:</h4>
+                    <h4>10 درصد مبلغ شب اول + 10 درصد مبلغ شب های باقیمانده</h4>
+                </div>
+                <div class="yellow d-flex">
+                    <h4 class="date">از 8 اسفند تا دوازده اسفند :</h4>
+                    <h4>50 درصد مبلغ شب اول + 20 درصد مبلغ شب های باقیمانده</h4>
+                </div>
+                <div class="pink d-flex">
+                    <h4 class="date">دوازدهم اسفند:</h4>
+                    <h4>100 درصد مبلغ شب های سپری شده + 50 درصد مبلغ شب های باقیمانده</h4>
+                </div>
+            </div>
+        </div>
+        <div class="timeout flex-column">
+            <div class="one d-flex flex-column align-items-center">
+                <i class="fa-solid fa-square-xmark"></i>
+                <h2>اتمام مهلت پرداخت</h2>
+                <h4>مهلت زمان شما برای پرداخت به اتمام رسید.</h4>
+            </div>
+            <div class="two d-flex flex-column justify-content-start">
+                <h2>پیشنهاد ما برای جایگزینی</h2>
+                <h4>برای تاریخ 27 بهمن - 29 بهمن 3 بزرگسال</h4>
+                <button>مشاهده پیشنهادهای بیشتر</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- start discountmodal -->
+    <div class="discountmodal">
+        <div class="modal d-flex flex-column align-items-center">
+            <div class="one d-flex justify-content-end">
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <h2>وارد کردن کد تخفیف</h2>
+            <h4>اگر کد تخفیف دارید در کادر زیر وارد کنید.</h4>
+            <input type="text" placeholder="کد تخفیف آشیانه" name="code" />
+            <button>بررسی کد</button>
+        </div>
+    </div>
+    <!-- end discountmodal -->
+    <!-- end rezerv -->
+
+    <!-- start loginalert -->
+    <div class="backalert">
+        <div class="alert d-flex flex-column">
+            <div class="top w-100 d-flex justify-content-end">
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <h4>برای افزودن به علاقه‌مندی‌ها، لطفا ابتدا وارد شوید</h4>
+            <div class="btn d-flex justify-content-center">
+                <button>ورود / ثبت نام</button>
+            </div>
+        </div>
+    </div>
+    <!-- end loginalert -->
+
+    <!-- start favmodal -->
+    <div class="backfav">
+        <div class="fav d-flex flex-column justify-content-start">
+            <hr />
+            <div class="top w-100 d-flex">
+                <h2>موردعلاقه‌های شما</h2>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <div class="add d-flex">
+                <i class="fa-light fa-plus"></i>
+                <h3>اضافه کردن لیست جدید</h3>
+            </div>
+            <div class="list d-flex flex-column"></div>
+        </div>
+    </div>
+    <!-- end favmodal -->
+
+    <!-- start createmodal -->
+    <div class="backcreate">
+        <div class="create d-flex flex-column">
+            <hr />
+            <div class="top w-100 d-flex">
+                <h2>موردعلاقه‌های شما</h2>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <input type="text" placeholder="نام لیست" name="fav" />
+            <button>ایجاد لیست</button>
+        </div>
+    </div>
+    <!-- end createmodal -->
+
+    <!-- start show more -->
+    <div class="showmore w-100 flex-column justify-content-center align-items-center">
+        <h3>اقامتگاه خود را نیافتید؟</h3>
+        <button class="d-flex justify-content-evenly align-items-center">
+            <h5>نمایش بیشتر</h5>
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+    </div>
+    <!-- end show more -->
+
+    <!-- start footer -->
+    <div class="footer w-100 d-flex flex-column justify-content-center align-items-start">
+        <div class="up d-flex justify-content-between align-items-center">
+            <div class="right w-75 d-flex justify-content-start align-items-start">
+                <div class="right d-flex flex-column align-content-end justify-content-between">
+                    <h3 class="titr">نحوه رزرو اقامتگاه</h3>
+                    <div class="case">
+                        <h6>راهنمای رزرو اقامتگاه</h6>
+                        <h6>شیوه های پرداخت</h6>
+                        <h6>لغو رزرو</h6>
+                    </div>
+                </div>
+                <div class="center d-flex flex-column align-content-end justify-content-between">
+                    <h3 class="titr">خدمات مشتریان</h3>
+                    <div class="case">
+                        <h6>پرسش های متداول مهمان</h6>
+                        <h6>پرسش های متداول میزبان</h6>
+                        <h6>چطور اقامتگاه ثبت کنم</h6>
+                        <h6>حریم شخصی کاربران</h6>
+                    </div>
+                </div>
+                <div class="left d-flex flex-column align-content-end justify-content-between">
+                    <h3 class="titr">با آشیانه</h3>
+                    <div class="case">
+                        <h6>مجله آشیانه</h6>
+                        <h6>قوانین آشیانه</h6>
+                        <h6>فرصت های شغلی</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="left w-25 d-flex flex-column justify-content-evenly align-items-start">
+                <div class="up">
+                    <img src="../assets/picture/آشیانه.png" alt="no image" />
+                </div>
+                <div class="center">
+                    <h4>آشیانه را در شبکه های اجتماعی دنبال کنید</h4>
+                </div>
+                <div class="bottom">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="center d-flex justify-content-evenly align-items-center">
+            <h4>اپلیکیشن آشیانه را از کجا دانلود کنیم؟</h4>
+            <div class="icon d-flex justify-content-evenly align-items-center">
+                <img src="../assets/picture/0a4d7500a1ed7e0f67c6a0890d892835a7fff770.png" alt="no image" />
+                <img src="../assets/picture/3fbbe3822a5217c8cde97c3f33b0de2853778f87.png" alt="no image" />
+            </div>
+        </div>
+        <div class="bottom d-flex justify-content-evenly align-items-center">
+            <div class="text d-flex">
+                <h5 class="right">در تمامی سفرهای شما، </h5>
+                <h5 class="left">24 ساعته در کنارتان هستین</h5>
+            </div>
+            <div class="num d-flex">
+                <i class="fa-thin fa-phone-flip"></i>
+                <h5>02123456789</h5>
+            </div>
+            <div class="line"></div>
+            <div class="email">
+                <h4>Support@ashianeh.ir</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+
+
+    <script src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+    <script>
+        jalaliDatepicker.startWatch();
+    </script>
+    <script src="../assets/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+        });
+    </script>
+    <script type="module"
+        src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+        integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg=="
+        data-cf-beacon='{"version":"2024.11.0","token":"ec9a6c21600d4161aa74e6a2c77efad2","r":1,"spa":2}'
+        crossorigin="anonymous"></script>
+    <script src="./proje2.js"></script>
+</body>
+
+</html>

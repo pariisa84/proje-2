@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
+    <link rel="stylesheet" href="../assets/icon/FontAwesome.Pro.7.1.0.0/fontawesome-pro-7.1.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/node_modules/mdb-ui-kit/css/mdb.min.css" />
+    <link rel="stylesheet" href="../assets/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./proje2.css" />
+    <link rel="stylesheet" href="./profile.css" />
+</head>
+
+<body dir="rtl">
+
+    <!-- start responsive menu -->
+    <div class="resmenu">
+        <div class="home" tabindex="0" data-target="home">
+            <i class="fa-regular fa-house"></i>
+            <h4>خانه</h4>
+        </div>
+        <div class="fav" tabindex="0" data-target="fav">
+            <i class="fa-sharp fa-thin fa-message-heart"></i>
+            <h4>مورد علاقه ها</h4>
+        </div>
+        <div class="travel" tabindex="0" data-target="travel">
+            <i class="fa-thin fa-earth-americas"></i>
+            <h4>سفرهای من</h4>
+        </div>
+        <div class="login" tabindex="0" data-target="login">
+            <i class="fa-thin fa-circle-user"></i>
+            <h4>حساب کاربری</h4>
+        </div>
+    </div>
+    <!-- end responsive menu -->
+
+    <!-- start header -->
+    <div class="header w-100 d-flex align-items-center justify-content-between">
+        <img src="../assets/picture/آشیانه.png" alt="no image" />
+        <span class="editing me-auto d-flex justify-content-evenly align-items-center">
+            <span class="one d-flex align-items-center justify-content-center"><i
+                    class="fa-sharp fa-light fa-user d-flex align-items-center justify-content-center"></i></span>
+            <span class="two d-flex align-items-center justify-content-center"><i class="fa-solid fa-bars"></i></span>
+        </span>
+    </div>
+    <!-- end header -->
+
+    <!-- start welcome -->
+    <div class="welcome align-items-center justify-content-between">
+        <i class="fa-light fa-arrow-right"></i>
+        <img src="../assets/picture/ac42bc2243842b144e86351c32dae20ee4a18bcc.png" alt="no image" />
+        <div class="text d-flex flex-column justify-content-center align-items-start">
+            <h1>حساب کاربری</h1>
+            <span class="welcome d-flex align-items-center justify-content-evenly">
+                <h4 class="name"></h4>
+                <h4 class="welcome">خوش آمدید</h4>
+            </span>
+        </div>
+        <i class="fa-light fa-angle-left"></i>
+    </div>
+    <!-- end welcome -->
+
+    <!-- start cards -->
+    <div class="cardbadge flex-wrap">
+        <div class="info d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-circle-user"></i>
+            <div class="text">
+                <h1>اطلاعات حساب کاربری</h1>
+                <h2>ویرایش اطلاعات حساب کاربری</h2>
+            </div>
+        </div>
+        <div class="transaction d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-receipt"></i>
+            <div class="text">
+                <h1>تراکنش‌های من</h1>
+                <h2>لیست تراکنش‌ها، تاریخ و وضعیت هر تراکنش</h2>
+            </div>
+            <i class="fa-light fa-angle-left"></i>
+        </div>
+        <h4 class="etebar">اعتبار و دعوت</h4>
+
+        <div class="fav d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-folder-heart"></i>
+            <div class="text">
+                <h1>علاقه مندی ها</h1>
+                <h2>لیست علاقه مندی ها و فولدر‌های اضافه شده</h2>
+            </div>
+        </div>
+        <div class="wallet d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-sharp fa-light fa-wallet"></i>
+            <div class="text">
+                <h1>کیف پول</h1>
+                <h2>موجودی، افزایش اعتبار</h2>
+            </div>
+            <i class="fa-light fa-angle-left"></i>
+        </div>
+        <h4 class="poshtiban">پشتیبانی</h4>
+
+        <div class="question d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-circle-question"></i>
+            <div class="text">
+                <h1>پرسش‌های متداول</h1>
+                <h2>پاسخ به سوالات پرتکرار و راهنمایی کاربران</h2>
+            </div>
+            <i class="fa-light fa-angle-left"></i>
+        </div>
+        <div class="contact d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-headset"></i>
+            <div class="text">
+                <h1>تماس با پشتیبانی</h1>
+                <h2>تماس با پشتیبانی آشیانه</h2>
+            </div>
+            <i class="fa-light fa-angle-left"></i>
+        </div>
+        <div class="about d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-taco"></i>
+            <div class="text">
+                <h1>درباره آشیانه</h1>
+                <h2>بیشتر با ما آشنا بشید</h2>
+            </div>
+        </div>
+        <div class="logout d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-arrow-right-from-bracket"></i>
+            <h1>خروج از حساب کاربری</h1>
+        </div>
+        <div class="travel d-flex flex-column justify-content-center align-items-start">
+            <i class="fa-light fa-suitcase-rolling"></i>
+            <h1>سفرهای من</h1>
+        </div>
+    </div>
+    <!-- end cards -->
+
+    <!-- start info -->
+    <div class="infor flex-wrap">
+        <div class="fname d-flex flex-column">
+            <h2>نام</h2>
+            <input type="text" name="fname" />
+        </div>
+        <div class="lname d-flex flex-column">
+            <h2>نام خانوادگی</h2>
+            <input type="text" name="lname" />
+        </div>
+        <div class="email d-flex flex-column">
+            <h2>ایمیل</h2>
+            <input type="text" placeholder="@ gmail.com" name="email" />
+            <h4 class="error">خطای احتمالی متن ورودی</h4>
+        </div>
+        <div class="phone d-flex flex-column">
+            <h2>شماره همراه</h2>
+            <input type="text" name="phonenum" />
+            <h4 class="error">خطای احتمالی متن ورودی</h4>
+        </div>
+        <div class="code d-flex flex-column">
+            <h2>کد ملی</h2>
+            <input type="text" name="num" />
+            <h4 class="error">خطای احتمالی متن ورودی</h4>
+        </div>
+        <div class="gender d-flex flex-column">
+            <h2>جنسیت</h2>
+            <a href="" class="gender d-flex align-items-center justify-content-between">
+                <h5>انتخاب کنید</h5>
+                <i class="fa-sharp fa-light fa-angle-left"></i>
+            </a>
+        </div>
+        <div class="birth d-flex flex-column">
+            <h2>تاریخ تولد</h2>
+            <input type="date" name="date" />
+        </div>
+        <div class="btn d-flex justify-content-right">
+            <button>ثبت تغییرات</button>
+        </div>
+    </div>
+
+    <!-- start gender modal -->
+    <div class="backgender">
+        <div class="gendermodal d-flex flex-column justify-content-center">
+            <hr />
+            <div class="top w-100 d-flex align-items-center justify-content-between">
+                <h2>جنسیت</h2>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <div class="woman d-flex justify-content-between">
+                <input type="radio" name="gender" id="woman" />
+                <label for="woman">زن</label>
+            </div>
+            <div class="man d-flex justify-content-between">
+                <input type="radio" name="gender" id="man" />
+                <label for="man">مرد</label>
+            </div>
+        </div>
+    </div>
+    <!-- end gender modal -->
+    <!-- end info -->
+
+    <!-- start transaction -->
+    <div class="transactions flex-column">
+        <div class="one d-flex justify-content-start">
+            <i class="fa-light fa-arrow-right"></i>
+            <h2>تراکنش های من</h2>
+        </div>
+        <div class="two d-flex">
+            <div class="right d-flex justify-content-evenly">
+                <h3>نوع تراکنش</h3>
+                <h3>تاریخ و ساعت</h3>
+                <h3>توضیح</h3>
+            </div>
+            <div class="left d-flex justify-content-evenly">
+                <h3>مبلغ (تومان)</h3>
+                <h3>باقی مانده حساب ( تومان)</h3>
+            </div>
+        </div>
+        <div class="three d-flex">
+            <div class="right d-flex">
+                <div class="d-flex">
+                    <i class="fa-light fa-arrow-down-left"></i>
+                    <h4>شارژ به کارت</h4>
+                </div>
+                <h4 class="time">08:15 _ 1403/07/12</h4>
+                <h4 class="text">کاهش شارژ اعتبار جهت واریز به کارت کاربر</h4>
+            </div>
+            <div class="left d-flex">
+                <div class="d-flex">
+                    <h4 class="num">315000-</h4>
+                    <h4 class="toman">تومان</h4>
+                </div>
+                <h4>0</h4>
+            </div>
+        </div>
+        <div class="four d-flex">
+            <div class="right d-flex">
+                <div class="d-flex">
+                    <i class="fa-light fa-arrow-up-right"></i>
+                    <h4>شارژ حساب کاربری</h4>
+                </div>
+                <h4 class="time">03:11 _ 1403/06/02</h4>
+                <h4 class="text">افزایش اعتبار به دلیل ریفاند کد رزرو 100_300</h4>
+            </div>
+            <div class="left d-flex">
+                <div class="d-flex">
+                    <h4 class="num">50000+</h4>
+                    <h4 class="toman">تومان</h4>
+                </div>
+                <h4>50000+ تومان </h4>
+            </div>
+        </div>
+        <div class="five d-flex">
+            <div class="right d-flex">
+                <div class="d-flex">
+                    <i class="fa-light fa-arrow-up-right"></i>
+                    <h4>افزایش اعتبار</h4>
+                </div>
+                <h4 class="time">12:53 _ 1403/06/01</h4>
+                <h4 class="text">افزایش اعتبار کاربر از طریق بانک</h4>
+            </div>
+            <div class="left d-flex">
+                <div class="d-flex">
+                    <h4 class="num">250000+</h4>
+                    <h4 class="toman">تومان</h4>
+                </div>
+                <h4>250000+ تومان </h4>
+            </div>
+        </div>
+        <div class="six d-flex">
+            <div class="right d-flex">
+                <div class="d-flex">
+                    <i class="fa-light fa-arrow-down-left"></i>
+                    <h4>خرید از درگاه</h4>
+                </div>
+                <h4 class="time">05:55 _ 1403/03/22</h4>
+                <h4 class="text">کاهش اعتبار از طریق خرید</h4>
+            </div>
+            <div class="left d-flex">
+                <div class="d-flex">
+                    <h4 class="num">450000-</h4>
+                    <h4 class="toman">تومان</h4>
+                </div>
+                <h4>0</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end transaction -->
+
+    <!-- start logout modal -->
+    <div class="backlog">
+        <div class="logout d-flex flex-column justify-content-center align-items-center">
+            <hr />
+            <div class="top d-flex align-items-center">
+                <h2>از حساب کاربری خارج میشوید؟</h2>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <div class="button d-flex justify-content-between">
+                <button class="yes">بله</button>
+                <button class="no">خیر</button>
+            </div>
+        </div>
+    </div>
+    <!-- end logout modal -->
+
+    <!-- start favorite -->
+    <div class="favorite flex-column justify-content-end">
+        <div class="back d-flex">
+            <i class="fa-light fa-arrow-right"></i>
+            <h2>علاقه مندی‌ها</h2>
+        </div>
+        <div class="add d-flex">
+            <i class="fa-light fa-circle-plus"></i>
+            <h2>اضافه کردن لیست جدید</h2>
+        </div>
+        <div class="jnob d-flex flex-column">
+            <div class="top d-flex">
+                <h4> جنوب گردی</h4>
+                <i class="fa-light fa-ellipsis-vertical"></i>
+            </div>
+            <div class="cardbadge d-flex">
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/cb91fb1f2cf37d9a3710d5978a1d18a9cee7411f.jpg" alt="no image" />
+                    <h4>اجاره اتاقک های هرمز</h4>
+                </div>
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/36e64395cc894b37a0e890c3f1bd701925516f89.png" alt="no image" />
+                    <h4>اجاره بوم گردی جیزرو (مریخی) - واحد P1 قشم</h4>
+                </div>
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/9a3f5fee41d7129ad5b398822f61b1310d485e8e.jpg" alt="no image" />
+                    <h4>اجاره بوم گردی عمارت خلفان - واحد VIP قشم</h4>
+                </div>
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/80e96e213ad2f01ef3894628ea0b162eb5c8f267.png" alt="no image" />
+                    <h4>اجاره بوم گردی عمارت خلفان - واحد VIP قشم</h4>
+                </div>
+            </div>
+        </div>
+        <div class="shomal">
+            <div class="top d-flex">
+                <h4>شمال گردی</h4>
+                <i class="fa-light fa-ellipsis-vertical"></i>
+            </div>
+            <div class="cardbadge d-flex">
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/8c9910e6b14dd934dd03d284f32e37245c140bc0.png" alt="no image" />
+                    <h4>ویلا استخردار آبگرم</h4>
+                </div>
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/d8f3b6d4ef81bec711616e269a6ac58783e7808c.png" alt="no image" />
+                    <h4>اجاره کلبه یک خوابه جنگلی لفور - واحد انجیلی شیرگاه</h4>
+                </div>
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/62ff7127a66f95977aa2b7c9b2a8c1f062f1af08.png" alt="no image" />
+                    <h4>کلبه چوبی در مازندران</h4>
+                </div>
+                <div class="card d-flex flex-column">
+                    <i class="fa-solid fa-heart"></i>
+                    <img src="../assets/picture/c09ccc80fcc2b71587a75c2c451f79cee2a54519.png" alt="no image" />
+                    <h4>اجاره کلبه فلت چوبی ورگانو کلاردشت</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="backadd">
+        <div class="add d-flex flex-column">
+            <hr />
+            <div class="top d-flex">
+                <h4>جزئیات</h4>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <div class="btns d-flex">
+                <button class="edit d-flex">
+                    <i class="fa-sharp fa-light fa-pen-line"></i>
+                    <h5>ویرایش دسته بندی</h5>
+                </button>
+                <button class=" del d-flex">
+                    <i class="fa-light fa-trash-can"></i>
+                    <h5>حذف دسته بندی</h5>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="backedit">
+        <div class="edit d-flex flex-column">
+            <hr />
+            <div class="top d-flex">
+                <h4>ویرایش دسته بندی</h4>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <div class="btns d-flex flex-column">
+                <button class="jnob">جنوب گردی</button>
+                <button class="shomal">شمال گردی</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="backdel">
+        <div class="delet d-flex flex-column">
+            <hr />
+            <div class="top d-flex">
+                <h4>ایا مطمئن به حذف هستید؟</h4>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <div class="btns d-flex">
+                <button class="yes">بله</button>
+                <button class="no">خیر</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="message d-flex">
+        <i class="fa-solid fa-check"></i>
+        <h4>دسته‌بندی با موفقیت حذف شد</h4>
+    </div>
+    <!-- end favorite -->
+
+    <!-- start wallet -->
+    <div class="wallets">
+        <div class="right d-flex flex-column justify-content-end">
+            <div class="back d-flex">
+                <i class="fa-light fa-arrow-right"></i>
+                <h2>کیف پول</h2>
+            </div>
+            <div class="text">
+                <p>با شارژ موجودی حساب خود میتوانید با سرعت و سهولت بیشتری خرید کنید</p>
+            </div>
+            <input type="text" placeholder="مبلغ مورد نظر را وارد کنید" name="money" />
+            <div class="suggest d-flex">
+                <button class="one" data-amount="500000">500,000 تومان</button>
+                <button class="two" data-amount="1000000">1,000,000 تومان</button>
+                <button class="three" data-amount="1500000">1,500,000تومان</button>
+                <button class="four" data-amount="2000000">2,000,000 تومان</button>
+            </div>
+            <button>افزایش موجودی</button>
+        </div>
+        <div class="left d-flex justify-content-center align-items-start">
+            <div class="cart d-flex flex-column justify-content-center align-items-start">
+                <img src="../assets/picture/آشیانه.png" alt="no image" />
+                <div class="mojodi d-flex">
+                    <h3>موجودی کیف پول</h3>
+                    <div class="num d-flex align-items-center justify-content-center">
+                        <h4 class="num"></h4>
+                        <h4 class="toman">تومان</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end wallet -->
+
+    <!-- start question -->
+    <div class="questions flex-column justify-content-center">
+        <div class="search d-flex">
+            <input type="text" name="search" id="search" placeholder="جستجو بین سوالات" name="search" />
+            <i class="fa-thin fa-magnifying-glass"></i>
+        </div>
+        <details>
+            <summary class="d-flex">
+                <h4>چطور می‌توانم ثبت‌نام کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم اطلاعات حساب کاربری خود را ویرایش کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم اقامتگاه مورد نظرم را جستجو کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم از فیلترهای جستجو استفاده کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم بر اساس قیمت، اقامتگاه مورد نظر خود را جستجو کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم بر اساس نقشه، اقامتگاه مورد نظر خود را جستجو کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم اطلاعات اقامتگاه را مشاهده کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم اقامتگاه مورد نظرم را رزرو کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم قبل از رزرو، از شرایط لغو رزرو آن اقامتگاه آگاه شوم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>در صورت عدم رضایت از اقامتگاه چه اقدامی انجام دهیم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم قبل از رزرو، از شرایط لغو رزرو آن اقامتگاه آگاه شوم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>فرآیند لغو رزرو به چه صورت است؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم از شارژ اعتبار خود استفاده کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>آیا امکان خرید همزمان از شارژ اعتبار و کارت بانکی وجود دارد؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <details>
+            <summary class="d-flex">
+                <h4>چگونه می‌توانم اطلاعات حساب کاربری خود را ویرایش کنم؟</h4>
+                <i class="fa-sharp fa-light fa-angle-down"></i>
+            </summary>
+            <ol>
+                <li>برای رزرو اقامتگاه نیاز به ثبت‌نام در سایت است، می توانید بعد از ورود به سایت jabama.com در بالای
+                    صفحه سمت چپ دکمه ورود و ثبت نام را انتخاب کنید و با وارد کردن شماره موبایلتون، ثبت نامتان را انجام
+                    دهید.</li>
+                <li>بعد از ثبت شماره موبایل، یک کد 4 رقمی به شماره موبایل وارد شده شما پیامک می شود که میبایست کد
+                    دریافتی را در کادر مربوطه وارد و وارد حساب کاربریتان شوید.</li>
+            </ol>
+        </details>
+        <div class="bottom d-flex flex-column align-items-center justify-content-center">
+            <h2>پاسخ پرسش خود را پیدا نکردید؟</h2>
+            <h3>پرسش خود را ثبت کنید، ما بزودی پاسخ آن را برایتان ارسال خواهیم کرد.</h3>
+            <button>ثبت آنلاین سوال</button>
+        </div>
+    </div>
+    <!-- end question -->
+
+    <!-- start contact -->
+    <div class="contacts flex-column">
+        <div class="tamas d-flex flex-column">
+            <div class="back">
+                <i class="fa-light fa-arrow-right"></i>
+                <h4>تماس با آشیانه</h4>
+            </div>
+            <div class="question d-flex justify-content-between">
+                <div class="text d-flex">
+                    <h5 class="gray">لطفا پیش از ارسال ایمیل یا تماس تلفنی، ابتدا</h5>
+                    <h5 class="blue">پرسش‌های متداول</h5>
+                    <h5 class="gray">را مشاهده کنید.</h5>
+                </div>
+                <button>پرسش‌های متداول</button>
+            </div>
+            <div class="input d-flex flex-wrap">
+                <div class="mozo d-flex flex-column">
+                    <span class="d-flex">
+                        <h4>موضوع</h4>
+                        <h4 class="star">*</h4>
+                    </span>
+                    <input type="text" class="inputs" required name="mozo" />
+                </div>
+                <div class="flname d-flex flex-column">
+                    <span class="d-flex">
+                        <h4>نام و نام خانوادگی</h4>
+                        <h4 class="star">*</h4>
+                    </span>
+                    <input type="text" class="inputs" required name="flname" />
+                </div>
+                <div class="email d-flex flex-column">
+                    <span class="d-flex">
+                        <h4>ایمیل</h4>
+                        <h4 class="star">*</h4>
+                    </span>
+                    <input type="text" class="inputs" required name="emails" />
+                </div>
+                <div class="tel d-flex flex-column">
+                    <span class="d-flex">
+                        <h4>تلفن تماس</h4>
+                        <h4 class="star">*</h4>
+                    </span>
+                    <input type="text" class="inputs" required name="phone" />
+                </div>
+                <div class="tozi d-flex flex-column">
+                    <span class="d-flex">
+                        <h4>توضیحات</h4>
+                        <h4 class="star">*</h4>
+                    </span>
+                    <input type="text" name="tozih" class="inputs" placeholder="توضیحات شکایت خود را مطرح کنید" required />
+                </div>
+            </div>
+            <button class="btn">ثبت و ارسال</button>
+        </div>
+        <div class="ertebat d-flex flex-column">
+            <h2>راه‌های ارتباطی</h2>
+            <div class="tel d-flex">
+                <div class="right d-flex">
+                    <i class="fa-sharp fa-light fa-phone-volume"></i>
+                    <div class="left d-flex flex-column">
+                        <h4>تلفن پشتیبانی:</h4>
+                        <h5>021-123645193</h5>
+                    </div>
+                </div>
+                <div class="center d-flex">
+                    <i class="fa-light fa-envelope"></i>
+                    <div class="left d-flex flex-column">
+                        <h4>ایمیل:</h4>
+                        <h5>support@ashianneh.ir</h5>
+                    </div>
+                </div>
+                <div class="left d-flex">
+                    <i class="fa-sharp fa-light fa-map-location-dot"></i>
+                    <div class="left d-flex flex-column">
+                        <h4>دفتر مرکزی:</h4>
+                        <h5>اکباتان، نبش اتوبان همت، کوچه سعادت، پلاک ۲
+                            کد پستی: ۱۲۹۴۷۲۲۵۹۳</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end contact -->
+
+    <!-- start about as -->
+    <div class="aboutas flex-column">
+        <div class="back">
+            <i class="fa-light fa-arrow-right"></i>
+            <h4>درباره آشیانه</h4>
+        </div>
+        <img src="../assets/picture/11b2fdad245b6670e950ca1a7b137af24ba52c01.png" alt="no image" />
+        <div class="text d-flex flex-column justify-content-center align-items-start">
+            <h2>درباره آشیانه</h2>
+            <p>آشیانه، پلتفرمی مطمئن و ساده برای رزرو اقامتگاه‌های بوم‌گردی و ویلاهای لوکس در سراسر ایران است. ما با
+                فراهم کردن امکان جستجوی آسان و رزرو آنلاین، تجربه‌ای لذت‌بخش از اقامت در طبیعت را برای شما به ارمغان
+                می‌آوریم. تیم آشیانه متشکل از افراد متخصص و علاقه‌مند به گردشگری است که همواره تلاش می‌کنند بهترین خدمات
+                را به مهمانان ارائه دهند.</p>
+        </div>
+        <div class="value d-flex flex-column">
+            <div class="text d-flex flex-column">
+                <h2>ارزش‌های سازمانی</h2>
+                <p>همان‌گونه که هر جامعه‌ای ارزش‌های خاص خود را دارد، جاباما هم ارزش‌هایی دارد که حفظ و ترویج آن‌ها موجب
+                    انسجام و تمایز آن از سایر سازمان‌ها می‌گردد. با ملاحظه فلسفه فکری مدیران شرکت و همچنین شخصیت کارکنان
+                    آن، ایجاد فضایی که در آن تمامی تفاوت‌ها در کانون رشد و بقای سازمان معنا پیدا کند بسیار حائز اهمیت
+                    بوده و بنابراین ما سازمان را با رعایت ارزش‌هایی که از فرهنگ آن می‌آید غنی خواهیم کرد.</p>
+            </div>
+            <h4>ارزش‌های آشیانه</h4>
+            <div class="cardbadge d-flex flex-wrap">
+                <div class="card d-flex flex-column">
+                    <h2>توسعه و تعالی</h2>
+                    <p>ما به دنبال تسهیل تعالی سازمان هستیم تا آنکه زمینه تعالی واحدهای سازمانی و خود را فراهم سازیم.
+                    </p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>توانمندسازی</h2>
+                    <p>ما به دنبال ارتقای دائمی دانش و مهارت‌­ها در ابعاد رفتاری و شغلی و بهینه‌­سازی توانایی‌­ها در
+                        راستانی نیازهای سازمان هستیم.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>تعهد حرفه­‌ای</h2>
+                    <p>ما به دنبال ارزیابی تعهد، در تمامی ابعاد آن بوده و به دنبال ارزش افزوده دو طرفه برای سازمان و
+                        همکارانمان هستیم.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>روابط شبکه‌­ای</h2>
+                    <p>ما به دنبال برقراری روابط میان فردی فراتر از سمت، سطح و واحد جهت آشنایی با تجارب و تخصص همدیگر و
+                        افزایش سرمایه اجتماعی سازمان هستیم.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>سازمان دوستانه</h2>
+                    <p>سازمان ما قبیله­‌ای است که اعضای آن در جامعه­ ملاحظه­‌گر و هواخواه آن، کار می‌­کنند.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>رهبری تسهیل­­‌گرانه</h2>
+                    <p>رهبران سازمان مدیران و سرپرستانی هستند که از تجارب و حمایت­‌های خود برای تسهیل و پیشبرد آن
+                        استفاده می‌کنند.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>ایده و خلق راهکار</h2>
+                    <p>ما به دنبال نظراتی هستیم که در آن حوزه تخصص و تجربه­ داریم و می­‌توانیم راهی برای رفع مشکلات یا
+                        توسعه قوت­‌ها ارائه کنیم.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>کار با حال خوش</h2>
+                    <p>تمامی کارها برای لذت بردن از انجام و از آن مهم­تر برای لذت دیدن حال خوش همکاران انجام می‌­شود.
+                    </p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>عاملیت</h2>
+                    <p>تمامی اعضای سازمان خود را مسئول انجام و عدم انجام کارهای خود در تمام مدت زندگی کاری‌شان
+                        می­‌دانند.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>با هم کار کردن</h2>
+                    <p>ما کارهایی که می‌­توانیم باهم انجام دهیم را به صورت انفرادی انجام نداده و از با هم بودن لذت
+                        می‌­بریم.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>مربی­گری</h2>
+                    <p>رهبران سازمان اعضای تیم­­‌های خود را برای انجام وظایف‌شان رشد داده و بستر انجام وظایف آن­ها را
+                        فراهم می­‌کنیم.</p>
+                </div>
+                <div class="card d-flex flex-column">
+                    <h2>همدلی</h2>
+                    <p>ما با منطق، تحلیل و تصمیم عمل می­نماییم و آن را با کمک و یاری یکدیگر به ثمر می‌­رسانیم.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about as -->
+
+    <!-- start mytravel -->
+    <div class="mytravel flex-column">
+        <div class="one d-flex justify-content-start">
+            <i class="fa-light fa-arrow-right"></i>
+            <h2>سفر های من</h2>
+        </div>
+        <div class="two d-flex justify-content-start">
+            <div class="now">رزرو فعلی</div>
+            <div class="befor">رزرو قبلی</div>
+        </div>
+        <div class="three d-flex">
+            <div class="right d-flex">
+                <img src="../assets/picture/b6aa486f32b24f0e227fd2f73f3605b69b267b63.jpg" alt="no image" />
+                <div class="text d-flex flex-column">
+                    <h2>اجاره کلبه فلت چوبی ورگانو کلاردشت</h2>
+                    <h4>مازندران</h4>
+                    <h4>3 اسفند</h4>
+                </div>
+            </div>
+            <div class="left">
+                <h3> مشاهده جزییات لغو</h3>
+            </div>
+        </div>
+        <div class="four d-flex">
+            <div class="right d-flex">
+                <img src="../assets/picture/130a50db2eea3ffd9cc47c1ccf8de2795b21a9ff.jpg" alt="no image" />
+                <div class="text d-flex flex-column">
+                    <h2>جاره کلبه چوبی </h2>
+                    <h4>مازندران</h4>
+                    <h4>15 بهمن</h4>
+                </div>
+            </div>
+            <div class="left">
+                <h3> مشاهده جزییات لغو</h3>
+            </div>
+        </div>
+        <div class="five d-flex">
+            <div class="right d-flex">
+                <img src="../assets/picture/cee65cc3e3226a5d3a807cd7c8559a45e356a674.png" alt="no image" />
+                <div class="text d-flex flex-column">
+                    <h2>اجاره هتل</h2>
+                    <h4>جزیره کیش</h4>
+                    <h4>25 فروردین</h4>
+                </div>
+            </div>
+            <div class="left">
+                <h3> مشاهده جزییات لغو</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="backtravel">
+        <div class="travelmodal d-flex flex-column">
+            <hr />
+            <div class="one d-flex">
+                <h2>جزئیات لغو رزرو</h2>
+                <i class="fa-light fa-square-xmark"></i>
+            </div>
+            <div class="two d-flex flex-column">
+                <div class="top d-flex">
+                    <h4>نوع درخواست</h4>
+                    <h4>تاریخ و ساعت</h4>
+                </div>
+                <div class="bottom d-flex">
+                    <h4>لغو رزرو و بازگشت وجه</h4>
+                    <h4>1403/06/04 - 13:03</h4>
+                </div>
+            </div>
+            <div class="three d-flex">
+                <h4>مبلغ پرداختی شما </h4>
+                <h4> 5,200,000 تومان</h4>
+            </div>
+            <div class="four d-flex">
+                <h4>کسر مبلغ برای دیر کرد شما</h4>
+                <h4> 1,040,000 تومان</h4>
+            </div>
+            <div class="five d-flex">
+                <h4>مبلغ دریافتی شما</h4>
+                <h4> 4,160,000 تومان</h4>
+            </div>
+            <button>ورود / ثبت نام</button>
+        </div>
+    </div>
+    <!-- end mytravel -->
+
+    <!-- start footer -->
+    <div class="footer w-100 d-flex flex-column justify-content-center align-items-start">
+        <div class="up d-flex justify-content-between align-items-center">
+            <div class="right w-75 d-flex justify-content-start align-items-start">
+                <div class="right d-flex flex-column align-content-end justify-content-between">
+                    <h3 class="titr">نحوه رزرو اقامتگاه</h3>
+                    <div class="case">
+                        <h6>راهنمای رزرو اقامتگاه</h6>
+                        <h6>شیوه های پرداخت</h6>
+                        <h6>لغو رزرو</h6>
+                    </div>
+                </div>
+                <div class="center d-flex flex-column align-content-end justify-content-between">
+                    <h3 class="titr">خدمات مشتریان</h3>
+                    <div class="case">
+                        <h6>پرسش های متداول مهمان</h6>
+                        <h6>پرسش های متداول میزبان</h6>
+                        <h6>چطور اقامتگاه ثبت کنم</h6>
+                        <h6>حریم شخصی کاربران</h6>
+                    </div>
+                </div>
+                <div class="left d-flex flex-column align-content-end justify-content-between">
+                    <h3 class="titr">با آشیانه</h3>
+                    <div class="case">
+                        <h6>مجله آشیانه</h6>
+                        <h6>قوانین آشیانه</h6>
+                        <h6>فرصت های شغلی</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="left w-25 d-flex flex-column justify-content-evenly align-items-start">
+                <div class="up">
+                    <img src="../assets/picture/آشیانه.png" alt="no image" />
+                </div>
+                <div class="center">
+                    <h4>آشیانه را در شبکه های اجتماعی دنبال کنید</h4>
+                </div>
+                <div class="bottom">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="center d-flex justify-content-evenly align-items-center">
+            <h4>اپلیکیشن آشیانه را از کجا دانلود کنیم؟</h4>
+            <div class="icon d-flex justify-content-evenly align-items-center">
+                <img src="../assets/picture/0a4d7500a1ed7e0f67c6a0890d892835a7fff770.png" alt="no image" />
+                <img src="../assets/picture/3fbbe3822a5217c8cde97c3f33b0de2853778f87.png" alt="no image" />
+            </div>
+        </div>
+        <div class="bottom d-flex justify-content-evenly align-items-center">
+            <div class="text d-flex">
+                <h5 class="right">در تمامی سفرهای شما، </h5>
+                <h5 class="left">24 ساعته در کنارتان هستین</h5>
+            </div>
+            <div class="num d-flex">
+                <i class="fa-thin fa-phone-flip"></i>
+                <h5>02123456789</h5>
+            </div>
+            <div class="line"></div>
+            <div class="email">
+                <h4>Support@ashianeh.ir</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+
+    <script src="./profile.js"></script>
+</body>
+
+</html>

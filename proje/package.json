@@ -1,0 +1,19 @@
+{
+  "name": "proje-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "proje2.js",
+  "scripts": {
+    "server": "json-server --watch proje2.json"
+  },
+  "keywords": [],
+  "author": "parisa",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.18.1",
+    "bootstrap": "^5.3.8",
+    "json-server": "^1.0.0-beta.15",
+    "mdb-ui-kit": "^9.3.0"
+  }
+}

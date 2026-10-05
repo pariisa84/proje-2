@@ -1,0 +1,5019 @@
+@font-face {
+  font-family: font;
+  src: url(../assets/font/fa/Vazirmatn-Regular.eot);
+  src: url(../assets/font/fa/Vazirmatn-Regular.woff);
+  src: url(../assets/font/fa/Vazirmatn-Regular.woff2);
+  src: url(../assets/font/fa/Vazirmatn-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.header {
+  height: 100px;
+  border-bottom: 1px solid #ECEFF2;
+  padding: 16px 121px;
+}
+div.header > img {
+  width: 70px;
+  height: 53px;
+}
+div.header > span.editing {
+  width: 88px;
+  height: 48px;
+  border: 1px solid #D6DCE1;
+  border-radius: 999px;
+  padding: 8px;
+  cursor: pointer;
+}
+div.header > span.editing > span.one {
+  width: 24px;
+  height: 24px;
+}
+div.header > span.editing > span.one > i {
+  font-size: 20px;
+  color: #45535F;
+}
+div.header > span.editing > span.two {
+  width: 24px;
+  height: 24px;
+}
+div.header > span.editing > span.two > i {
+  font-size: 22px;
+  color: #45535F;
+}
+
+div.welcome {
+  display: flex;
+  width: 358px;
+  height: 64px;
+  gap: 12px;
+  margin-top: 46px;
+  margin-right: 300px;
+}
+div.welcome > i {
+  font-size: 20px;
+  color: #23292E;
+  cursor: pointer;
+  display: none;
+}
+div.welcome > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 45px;
+}
+div.welcome > div.text {
+  width: 282px;
+  height: 60px;
+  gap: 4px;
+}
+div.welcome > div.text > h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #23292E;
+}
+div.welcome > div.text > span.welcome {
+  gap: 5px;
+}
+div.welcome > div.text > span.welcome > h4.name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #546775;
+}
+div.welcome > div.text > span.welcome > h4.welcome {
+  font-size: 12px;
+  font-weight: 500;
+  color: #546775;
+}
+div.welcome > div.text > i {
+  display: none !important;
+}
+
+div.cardbadge {
+  width: 70%;
+  gap: 12px;
+  margin-top: 50px;
+  margin-right: 310px;
+  margin-bottom: 50px;
+  display: flex;
+}
+div.cardbadge > div.info,
+div.cardbadge > div.transaction,
+div.cardbadge > div.fav,
+div.cardbadge > div.wallet,
+div.cardbadge > div.question,
+div.cardbadge > div.contact,
+div.cardbadge > div.about {
+  width: 288px;
+  height: 180px;
+  padding: 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(7, 53, 69, 0.13);
+  cursor: pointer;
+}
+div.cardbadge > div.info > i,
+div.cardbadge > div.transaction > i,
+div.cardbadge > div.fav > i,
+div.cardbadge > div.wallet > i,
+div.cardbadge > div.question > i,
+div.cardbadge > div.contact > i,
+div.cardbadge > div.about > i {
+  font-size: 32px;
+  color: #23292E;
+  margin-top: 15px;
+}
+div.cardbadge > div.info > div.text,
+div.cardbadge > div.transaction > div.text,
+div.cardbadge > div.fav > div.text,
+div.cardbadge > div.wallet > div.text,
+div.cardbadge > div.question > div.text,
+div.cardbadge > div.contact > div.text,
+div.cardbadge > div.about > div.text {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+div.cardbadge > div.info > div.text > h1,
+div.cardbadge > div.transaction > div.text > h1,
+div.cardbadge > div.fav > div.text > h1,
+div.cardbadge > div.wallet > div.text > h1,
+div.cardbadge > div.question > div.text > h1,
+div.cardbadge > div.contact > div.text > h1,
+div.cardbadge > div.about > div.text > h1 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #23292E;
+  margin-top: 35px;
+}
+div.cardbadge > div.info > div.text > h2,
+div.cardbadge > div.transaction > div.text > h2,
+div.cardbadge > div.fav > div.text > h2,
+div.cardbadge > div.wallet > div.text > h2,
+div.cardbadge > div.question > div.text > h2,
+div.cardbadge > div.contact > div.text > h2,
+div.cardbadge > div.about > div.text > h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #889BA8;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+div.cardbadge > div.info > i.fa-angle-left,
+div.cardbadge > div.transaction > i.fa-angle-left,
+div.cardbadge > div.fav > i.fa-angle-left,
+div.cardbadge > div.wallet > i.fa-angle-left,
+div.cardbadge > div.question > i.fa-angle-left,
+div.cardbadge > div.contact > i.fa-angle-left,
+div.cardbadge > div.about > i.fa-angle-left {
+  display: none;
+}
+div.cardbadge > div.logout {
+  width: 288px;
+  height: 180px;
+  gap: 23px;
+  padding: 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(7, 53, 69, 0.13);
+  cursor: pointer;
+}
+div.cardbadge > div.logout > i {
+  font-size: 32px;
+  color: #E63946;
+  margin-top: 5px;
+}
+div.cardbadge > div.logout > h1 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #E63946;
+  margin-top: 30px;
+}
+div.cardbadge > div.travel {
+  width: 288px;
+  height: 180px;
+  gap: 23px;
+  padding: 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(7, 53, 69, 0.13);
+  cursor: pointer;
+}
+div.cardbadge > div.travel > i {
+  font-size: 32px;
+  color: #23292E;
+  margin-top: 5px;
+}
+div.cardbadge > div.travel > h1 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #23292E;
+  margin-top: 30px;
+}
+div.cardbadge > h4.etebar {
+  display: none;
+}
+div.cardbadge > h4.poshtiban {
+  display: none;
+}
+
+div.infor {
+  width: 90%;
+  margin-top: 50px;
+  margin-right: 150px;
+  gap: 80px;
+  display: none;
+}
+div.infor > div.fname > h2,
+div.infor > div.lname > h2,
+div.infor > div.phone > h2,
+div.infor > div.code > h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+  margin-right: 10px;
+}
+div.infor > div.fname > input,
+div.infor > div.lname > input,
+div.infor > div.phone > input,
+div.infor > div.code > input {
+  width: 349px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+}
+div.infor > div.phone > h4.error,
+div.infor > div.code > h4.error {
+  font-size: 14px;
+  font-weight: 400;
+  color: #B3222D;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: none;
+}
+div.infor > div.email > h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+  margin-right: 10px;
+}
+div.infor > div.email > input {
+  width: 349px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+}
+div.infor > div.email > input::-moz-placeholder {
+  color: #889BA8;
+}
+div.infor > div.email > input::placeholder {
+  color: #889BA8;
+}
+div.infor > div.email > h4.error {
+  font-size: 14px;
+  font-weight: 400;
+  color: #B3222D;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: none;
+}
+div.infor > div.gender > h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+  margin-right: 10px;
+}
+div.infor > div.gender > a.gender {
+  width: 349px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  padding: 12px;
+  text-decoration: none;
+}
+div.infor > div.gender > a.gender > h5 {
+  color: #889BA8;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+div.infor > div.gender > a.gender > i {
+  font-size: 10px;
+  color: #23292E;
+  margin-top: 5px;
+}
+div.infor > div.birth > h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+  margin-right: 10px;
+}
+div.infor > div.birth > input {
+  width: 349px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding: 12px;
+}
+div.infor > div.btn {
+  width: 90%;
+  box-shadow: none;
+  margin-right: -15px;
+  margin-bottom: 50px;
+}
+div.infor > div.btn:hover, div.infor > div.btn:focus, div.infor > div.btn:focus-visible, div.infor > div.btn:active {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+div.infor > div.btn > button {
+  width: 351px;
+  height: 48px;
+  background-color: #0D7D96;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+div.backgender {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+div.backgender > div.gendermodal {
+  width: 449px;
+  height: 216px;
+  position: fixed;
+  top: 200px;
+  left: 560px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px;
+  gap: 12px;
+}
+div.backgender > div.gendermodal > hr {
+  display: none;
+}
+div.backgender > div.gendermodal > div.top {
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+div.backgender > div.gendermodal > div.top > h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+}
+div.backgender > div.gendermodal > div.top > i {
+  font-size: 26px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.backgender > div.gendermodal > div.woman,
+div.backgender > div.gendermodal > div.man {
+  width: 62px;
+  gap: 8px;
+  margin-top: 20px;
+}
+div.backgender > div.gendermodal > div.woman > input,
+div.backgender > div.gendermodal > div.man > input {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+div.backgender > div.gendermodal > div.woman > label,
+div.backgender > div.gendermodal > div.man > label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+div.transactions {
+  width: 90%;
+  margin-top: 20px;
+  margin-right: 120px;
+  padding: 16px;
+  gap: 50px;
+  display: none;
+}
+div.transactions > div.one {
+  width: 40%;
+  gap: 10px;
+}
+div.transactions > div.one > i {
+  font-size: 20px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.transactions > div.one > h2 {
+  color: #23292E;
+  font-size: 18px;
+  font-weight: 800;
+}
+div.transactions > div.two {
+  gap: 380px;
+}
+div.transactions > div.two > div.right {
+  gap: 140px;
+}
+div.transactions > div.two > div.right > h3 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+}
+div.transactions > div.two > div.left {
+  gap: 140px;
+}
+div.transactions > div.two > div.left > h3 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+}
+div.transactions > div.three {
+  gap: 190px;
+}
+div.transactions > div.three > div.right {
+  gap: 45px;
+}
+div.transactions > div.three > div.right > div {
+  gap: 20px;
+}
+div.transactions > div.three > div.right > div > i {
+  color: #000000;
+  font-size: 16px;
+}
+div.transactions > div.three > div.right > div > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.three > div.right > h4.time {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+div.transactions > div.three > div.right > h4.text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.three > div.left {
+  gap: 250px;
+}
+div.transactions > div.three > div.left > div {
+  gap: 5px;
+}
+div.transactions > div.three > div.left > div > h4.num {
+  color: #E63946;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.three > div.left > div > h4.toman {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.three > div.left > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.four {
+  gap: 170px;
+}
+div.transactions > div.four > div.right {
+  gap: 25px;
+}
+div.transactions > div.four > div.right > div {
+  gap: 20px;
+}
+div.transactions > div.four > div.right > div > i {
+  color: #000000;
+  font-size: 16px;
+}
+div.transactions > div.four > div.right > div > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.four > div.right > h4.time {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.four > div.right > h4.text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+div.transactions > div.four > div.left {
+  gap: 205px;
+}
+div.transactions > div.four > div.left > div {
+  gap: 5px;
+}
+div.transactions > div.four > div.left > div > h4.num {
+  color: #32B55F;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.four > div.left > div > h4.toman {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.four > div.left > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.five {
+  gap: 260px;
+}
+div.transactions > div.five > div.right {
+  gap: 42px;
+}
+div.transactions > div.five > div.right > div {
+  gap: 20px;
+}
+div.transactions > div.five > div.right > div > i {
+  color: #000000;
+  font-size: 16px;
+}
+div.transactions > div.five > div.right > div > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.five > div.right > h4.time {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+div.transactions > div.five > div.right > h4.text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.five > div.left {
+  gap: 200px;
+}
+div.transactions > div.five > div.left > div {
+  gap: 5px;
+}
+div.transactions > div.five > div.left > div > h4.num {
+  color: #32B55F;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.five > div.left > div > h4.toman {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.five > div.left > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.six {
+  gap: 300px;
+}
+div.transactions > div.six > div.right {
+  gap: 45px;
+}
+div.transactions > div.six > div.right > div {
+  gap: 20px;
+}
+div.transactions > div.six > div.right > div > i {
+  color: #000000;
+  font-size: 16px;
+}
+div.transactions > div.six > div.right > div > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.six > div.right > h4.time {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+div.transactions > div.six > div.right > h4.text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.six > div.left {
+  gap: 250px;
+}
+div.transactions > div.six > div.left > div {
+  gap: 5px;
+}
+div.transactions > div.six > div.left > div > h4.num {
+  color: #E63946;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.six > div.left > div > h4.toman {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.transactions > div.six > div.left > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+div.backlog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 6;
+}
+div.backlog > div.logout {
+  width: 449px;
+  height: 145px;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 250px;
+  left: 519px;
+  border-radius: 12px;
+  padding: 10px 16px;
+  gap: 20px;
+}
+div.backlog > div.logout > hr {
+  display: none;
+}
+div.backlog > div.logout > div.top {
+  width: 449px;
+  height: 26px;
+  gap: 115px;
+  border: none;
+}
+div.backlog > div.logout > div.top > h2 {
+  width: 400px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+}
+div.backlog > div.logout > div.top > i {
+  font-size: 26px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.backlog > div.logout > div.button {
+  width: 401px;
+  gap: 30px;
+}
+div.backlog > div.logout > div.button > button.yes {
+  width: 185px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #0D7D96;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+}
+div.backlog > div.logout > div.button > button.no {
+  width: 185px;
+  height: 40px;
+  border: 1px solid #0D7D96;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #FFFFFF;
+  color: #0D7D96;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+div.favorite {
+  width: 90%;
+  margin-top: 50px;
+  margin-right: 75px;
+  margin-bottom: 100px;
+  gap: 35px;
+  display: none;
+}
+div.favorite > div.back {
+  width: 100%;
+  gap: 8px;
+  margin-right: 15px;
+}
+div.favorite > div.back > i {
+  font-size: 20px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.favorite > div.back > h2 {
+  color: #23292E;
+  font-size: 20px;
+  font-weight: 800;
+}
+div.favorite > div.add {
+  width: 100%;
+  gap: 12px;
+}
+div.favorite > div.add > i {
+  font-size: 20px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.favorite > div.add > h2 {
+  color: #23292E;
+  font-size: 20px;
+  font-weight: 800;
+}
+div.favorite > div.jnob {
+  width: 100%;
+  gap: 8px;
+}
+div.favorite > div.jnob > div.top {
+  gap: 1220px;
+  border: none;
+  z-index: 1;
+}
+div.favorite > div.jnob > div.top > h4 {
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.favorite > div.jnob > div.top > i {
+  color: #23292E;
+  font-size: 24px;
+  cursor: pointer;
+}
+div.favorite > div.jnob > div.cardbadge {
+  width: 100%;
+  gap: 70px;
+  margin: 0;
+}
+div.favorite > div.jnob > div.cardbadge > div.card {
+  width: 280px;
+  height: 287px;
+  gap: 20px;
+  border: none;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: none;
+}
+div.favorite > div.jnob > div.cardbadge > div.card > img {
+  width: 100%;
+  height: 230px;
+  border-radius: 12px;
+  position: relative;
+}
+div.favorite > div.jnob > div.cardbadge > div.card > i {
+  font-size: 24px;
+  color: #E63946;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 240px;
+  z-index: 3;
+}
+div.favorite > div.jnob > div.cardbadge > div.card > h4 {
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 800;
+}
+div.favorite > div.shomal {
+  width: 100%;
+  gap: 8px;
+}
+div.favorite > div.shomal > div.top {
+  gap: 1220px;
+  border: none;
+  z-index: 1;
+}
+div.favorite > div.shomal > div.top > h4 {
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.favorite > div.shomal > div.top > i {
+  color: #23292E;
+  font-size: 24px;
+  cursor: pointer;
+}
+div.favorite > div.shomal > div.cardbadge {
+  width: 100%;
+  gap: 70px;
+  margin: 0;
+}
+div.favorite > div.shomal > div.cardbadge > div.card {
+  width: 280px;
+  height: 287px;
+  gap: 20px;
+  border: none;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: none;
+}
+div.favorite > div.shomal > div.cardbadge > div.card > img {
+  width: 100%;
+  height: 230px;
+  border-radius: 12px;
+  position: relative;
+}
+div.favorite > div.shomal > div.cardbadge > div.card > i {
+  font-size: 24px;
+  color: #E63946;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 240px;
+  z-index: 3;
+}
+div.favorite > div.shomal > div.cardbadge > div.card > h4 {
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+div.backadd {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}
+div.backadd > div.add {
+  width: 449px;
+  height: 136px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  position: fixed;
+  top: 280px;
+  left: 540px;
+  padding: 10px 24px;
+  gap: 16px;
+  z-index: 5;
+}
+div.backadd > div.add > hr {
+  display: none;
+}
+div.backadd > div.add > div.top {
+  width: 100%;
+  height: 32px;
+  margin-right: -16px;
+  gap: 315px;
+  border: none;
+}
+div.backadd > div.add > div.top > h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+}
+div.backadd > div.add > div.top > i {
+  font-size: 26px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.backadd > div.add > div.btns {
+  gap: 16px;
+}
+div.backadd > div.add > div.btns > button {
+  width: 192px;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #0D7D96;
+  background-color: #FFFFFF;
+  gap: 10px;
+}
+div.backadd > div.add > div.btns > button > i {
+  font-size: 19px;
+  color: #0D7D96;
+}
+div.backadd > div.add > div.btns > button > h5 {
+  color: #0D7D96;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+div.backedit {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}
+div.backedit > div.edit {
+  width: 449px;
+  height: 190px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  position: fixed;
+  top: 280px;
+  left: 540px;
+  padding: 10px 24px;
+  gap: 16px;
+  z-index: 5;
+}
+div.backedit > div.edit > hr {
+  display: none;
+}
+div.backedit > div.edit > div.top {
+  width: 111%;
+  height: 32px;
+  margin-right: -20px;
+  gap: 215px;
+  border: none;
+}
+div.backedit > div.edit > div.top > h4 {
+  width: 150px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+}
+div.backedit > div.edit > div.top > i {
+  font-size: 26px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.backedit > div.edit > div.btns {
+  gap: 10px;
+}
+div.backedit > div.edit > div.btns > button {
+  width: 401px;
+  height: 48px;
+  background-color: #FFFFFF;
+  border: 1px solid #D6DCE1;
+  padding: 12px;
+  border-radius: 4px;
+  color: #45535F;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+div.backdel {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}
+div.backdel > div.delet {
+  width: 449px;
+  height: 136px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  position: fixed;
+  top: 280px;
+  left: 540px;
+  padding: 10px 24px;
+  gap: 16px;
+  z-index: 5;
+}
+div.backdel > div.delet > hr {
+  display: none;
+}
+div.backdel > div.delet > div.top {
+  width: 112%;
+  height: 32px;
+  margin-right: -24px;
+  gap: 155px;
+  border: none;
+}
+div.backdel > div.delet > div.top > h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #23292E;
+}
+div.backdel > div.delet > div.top > i {
+  font-size: 26px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.backdel > div.delet > div.btns {
+  gap: 30px;
+}
+div.backdel > div.delet > div.btns > button.yes {
+  width: 185px;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #E63946;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+}
+div.backdel > div.delet > div.btns > button.no {
+  width: 185px;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #0D7D96;
+  background-color: #FFFFFF;
+  color: #0D7D96;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+div.message {
+  width: 369px;
+  height: 56px;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 50px;
+  left: 1015px;
+  background-color: #DFF9E4;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+div.message > i {
+  font-size: 24px;
+  color: #32B55F;
+}
+div.message > h4 {
+  color: #20753E;
+  font-size: 14px;
+  font-weight: 700;
+}
+div.message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+div.wallets {
+  display: none;
+  width: 84%;
+  margin-top: 50px;
+  margin-right: 150px;
+  margin-bottom: 60px;
+}
+div.wallets > div.right {
+  width: 60%;
+  gap: 16px;
+}
+div.wallets > div.right > div.back {
+  width: 100%;
+  gap: 8px;
+}
+div.wallets > div.right > div.back > i {
+  font-size: 20px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.wallets > div.right > div.back > h2 {
+  color: #23292E;
+  font-size: 18px;
+  font-weight: 800;
+}
+div.wallets > div.right > div.text {
+  width: 100%;
+  margin-top: 30px;
+}
+div.wallets > div.right > div.text > p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.wallets > div.right > input {
+  width: 454px;
+  height: 48px;
+  color: #23292E;
+  border: 1px solid #D6DCE1;
+  border-radius: 8px;
+  padding: 12px;
+}
+div.wallets > div.right > input::-moz-placeholder {
+  color: #889BA8;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.wallets > div.right > input::placeholder {
+  color: #889BA8;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.wallets > div.right > div.suggest {
+  width: 100%;
+  gap: 16px;
+  margin-top: 5px;
+}
+div.wallets > div.right > div.suggest > button.one,
+div.wallets > div.right > div.suggest > button.two,
+div.wallets > div.right > div.suggest > button.three,
+div.wallets > div.right > div.suggest > button.four {
+  width: 120px;
+  height: 32px;
+  border: 1px solid #B2BEC7;
+  border-radius: 20px;
+  padding: 6px 8px;
+  background-color: #FFFFFF;
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.wallets > div.right > button {
+  width: 220px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #0D7D96;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+div.wallets > div.left {
+  width: 45%;
+}
+div.wallets > div.left > div.cart {
+  width: 354px;
+  height: 179px;
+  border: none;
+  border-radius: 12px;
+  gap: 40px;
+  background: linear-gradient(90deg, rgb(2, 100, 112) 0%, rgb(3, 149, 167) 50%, rgb(4, 191, 214) 100%);
+}
+div.wallets > div.left > div.cart > img {
+  width: 70px;
+  height: 52px;
+  margin-right: 15px;
+}
+div.wallets > div.left > div.cart > div.mojodi {
+  width: 90%;
+  height: 28px;
+  gap: 150px;
+  margin-right: 15px;
+  flex-wrap: nowrap;
+}
+div.wallets > div.left > div.cart > div.mojodi > h3 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+div.wallets > div.left > div.cart > div.mojodi > div.num {
+  gap: 3px;
+  flex-wrap: wrap;
+  margin-right: -15px;
+}
+div.wallets > div.left > div.cart > div.mojodi > div.num > h4.num {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: visible;
+}
+div.wallets > div.left > div.cart > div.mojodi > div.num > h4.toman {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+div.questions {
+  width: 60%;
+  margin-top: 50px;
+  margin-right: 320px;
+  gap: 8px;
+  display: none;
+}
+div.questions > div.search > input {
+  width: 794px;
+  height: 48px;
+  border: 1px solid #D6DCE1;
+  padding: 12px;
+  border-radius: 8px;
+  position: relative;
+}
+div.questions > div.search > input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #23292E;
+}
+div.questions > div.search > input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #23292E;
+}
+div.questions > div.search > i {
+  font-size: 19px;
+  color: #23292E;
+  position: absolute;
+  left: 415px;
+  top: 165px;
+}
+div.questions > details {
+  width: 794px;
+  padding: 24px;
+  border-bottom: 1px solid #ECEFF2;
+}
+div.questions > details > summary {
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+div.questions > details > summary::-webkit-marker {
+  display: none;
+}
+div.questions > details > summary > h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #23292E;
+}
+div.questions > details > summary > i {
+  font-size: 14px;
+  font-weight: 800;
+  color: #23292E;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+div.questions > details > ol {
+  padding: 24px;
+}
+div.questions > details > ol > li {
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.questions > details[open] summary > i {
+  transform: translateY(-50%) rotate(180deg);
+}
+div.questions > div.bottom {
+  width: 392px;
+  gap: 20px;
+  margin-right: 240px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+div.questions > div.bottom > h2 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+}
+div.questions > div.bottom > h3 {
+  color: #889BA8;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+div.questions > div.bottom > button {
+  width: 222px;
+  height: 40px;
+  background-color: #FFFFFF;
+  color: #0D7D96;
+  border: 1px solid #0D7D96;
+  border-radius: 8px;
+  padding: 10px 16px;
+  line-height: 20px;
+}
+
+div.aboutas {
+  width: 100%;
+  gap: 30px;
+  display: none;
+}
+div.aboutas > div.back {
+  display: none;
+}
+div.aboutas > img {
+  width: 100%;
+  height: 618px;
+}
+div.aboutas > div.text {
+  width: 100%;
+  height: 204px;
+  padding-right: 424px;
+  padding-left: 424px;
+  gap: 24px;
+}
+div.aboutas > div.text > h2 {
+  color: #23292E;
+  font-size: 28px;
+  font-weight: 800;
+}
+div.aboutas > div.text > p {
+  width: 592px;
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.aboutas > div.value {
+  width: 100%;
+  padding: 64px 121px;
+  gap: 10px;
+  background-color: #ECEFF2;
+  margin-bottom: -25px;
+}
+div.aboutas > div.value > div.text {
+  gap: 24px;
+}
+div.aboutas > div.value > div.text > h2 {
+  color: #23292E;
+  font-size: 28px;
+  font-weight: 800;
+}
+div.aboutas > div.value > div.text > p {
+  width: 1198px;
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.aboutas > div.value > h4 {
+  color: #353D45;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+div.aboutas > div.value > div.cardbadge {
+  width: 1230px;
+  margin: 0;
+  gap: 24px;
+}
+div.aboutas > div.value > div.cardbadge > div.card {
+  width: 288px;
+  height: 216px;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  padding: 30px 32px;
+  gap: 16px;
+}
+div.aboutas > div.value > div.cardbadge > div.card > h2 {
+  color: #23292E;
+  font-size: 28px;
+  font-weight: 800;
+}
+div.aboutas > div.value > div.cardbadge > div.card > p {
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+div.contacts {
+  width: 100%;
+  display: none;
+  gap: 20px;
+  margin-top: 50px;
+}
+div.contacts > div.tamas {
+  width: 1198px;
+  margin-right: 150px;
+  padding: 32px;
+  border: 1px solid #ECEFF2;
+  border-radius: 12px;
+  gap: 24px;
+}
+div.contacts > div.tamas > div.back > i {
+  display: none;
+}
+div.contacts > div.tamas > div.back > h4 {
+  color: #45535F;
+  font-size: 20px;
+  font-weight: 800;
+}
+div.contacts > div.tamas > div.question {
+  gap: 76px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ECEFF2;
+}
+div.contacts > div.tamas > div.question > div.text {
+  gap: 5px;
+}
+div.contacts > div.tamas > div.question > div.text > h5.gray {
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.contacts > div.tamas > div.question > div.text > h5.blue {
+  color: #0D7D96;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+div.contacts > div.tamas > div.question > button {
+  width: 174px;
+  height: 48px;
+  border: 1px solid #0D7D96;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #0D7D96;
+  background-color: #FFFFFF;
+}
+div.contacts > div.tamas > div.input {
+  gap: 20px;
+}
+div.contacts > div.tamas > div.input > div.mozo {
+  text-align: right;
+}
+div.contacts > div.tamas > div.input > div.mozo > span {
+  gap: 2px;
+}
+div.contacts > div.tamas > div.input > div.mozo > span > h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #23292E;
+}
+div.contacts > div.tamas > div.input > div.mozo > span > h4.star {
+  font-size: 14px;
+  font-weight: 700;
+  color: #B3222D;
+}
+div.contacts > div.tamas > div.input > div.mozo > input {
+  width: 555px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  background-color: #FFFFFF;
+  padding: 12px;
+}
+div.contacts > div.tamas > div.input > div.flname {
+  text-align: right;
+}
+div.contacts > div.tamas > div.input > div.flname > span {
+  gap: 2px;
+}
+div.contacts > div.tamas > div.input > div.flname > span > h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #23292E;
+}
+div.contacts > div.tamas > div.input > div.flname > span > h4.star {
+  font-size: 14px;
+  font-weight: 700;
+  color: #B3222D;
+}
+div.contacts > div.tamas > div.input > div.flname > input {
+  width: 555px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  background-color: #FFFFFF;
+  padding: 12px;
+}
+div.contacts > div.tamas > div.input > div.email {
+  text-align: right;
+}
+div.contacts > div.tamas > div.input > div.email > span {
+  gap: 2px;
+}
+div.contacts > div.tamas > div.input > div.email > span > h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #23292E;
+}
+div.contacts > div.tamas > div.input > div.email > span > h4.star {
+  font-size: 14px;
+  font-weight: 700;
+  color: #B3222D;
+}
+div.contacts > div.tamas > div.input > div.email > input {
+  width: 555px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  background-color: #FFFFFF;
+  padding: 12px;
+}
+div.contacts > div.tamas > div.input > div.tel {
+  text-align: right;
+}
+div.contacts > div.tamas > div.input > div.tel > span {
+  gap: 2px;
+}
+div.contacts > div.tamas > div.input > div.tel > span > h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #23292E;
+}
+div.contacts > div.tamas > div.input > div.tel > span > h4.star {
+  font-size: 14px;
+  font-weight: 700;
+  color: #B3222D;
+}
+div.contacts > div.tamas > div.input > div.tel > input {
+  width: 555px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  background-color: #FFFFFF;
+  padding: 12px;
+}
+div.contacts > div.tamas > div.input > div.tozi {
+  text-align: right;
+}
+div.contacts > div.tamas > div.input > div.tozi > span {
+  gap: 2px;
+}
+div.contacts > div.tamas > div.input > div.tozi > span > h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #23292E;
+}
+div.contacts > div.tamas > div.input > div.tozi > span > h4.star {
+  font-size: 14px;
+  font-weight: 700;
+  color: #B3222D;
+}
+div.contacts > div.tamas > div.input > div.tozi > input {
+  width: 1134px;
+  height: 150px;
+  border-radius: 8px;
+  border: 1px solid #D6DCE1;
+  background-color: #FFFFFF;
+  padding: 12px;
+}
+div.contacts > div.tamas > div.input > div.tozi > input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #697E8E;
+}
+div.contacts > div.tamas > div.input > div.tozi > input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #697E8E;
+}
+div.contacts > div.tamas > button.btn {
+  width: 174px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  box-shadow: none;
+  background-color: #0D7D96;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 60rem;
+  cursor: pointer;
+}
+div.contacts > div.ertebat {
+  width: 100%;
+  padding: 32px 123px;
+  gap: 24px;
+  background-color: #ECEFF2;
+  margin-bottom: -25px;
+}
+div.contacts > div.ertebat > h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #23292E;
+}
+div.contacts > div.ertebat > div.tel {
+  gap: 105px;
+}
+div.contacts > div.ertebat > div.tel > div.right {
+  width: 416px;
+  gap: 16px;
+}
+div.contacts > div.ertebat > div.tel > div.right > i {
+  font-size: 32px;
+  color: #23292E;
+}
+div.contacts > div.ertebat > div.tel > div.right > div.left {
+  gap: 4px;
+}
+div.contacts > div.ertebat > div.tel > div.right > div.left > h4 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 700;
+}
+div.contacts > div.ertebat > div.tel > div.right > div.left > h5 {
+  color: #45535F;
+  font-size: 14px;
+  font-weight: 500;
+}
+div.contacts > div.ertebat > div.tel > div.center {
+  width: 416px;
+  gap: 16px;
+}
+div.contacts > div.ertebat > div.tel > div.center > i {
+  font-size: 32px;
+  color: #23292E;
+}
+div.contacts > div.ertebat > div.tel > div.center > div.left {
+  gap: 4px;
+}
+div.contacts > div.ertebat > div.tel > div.center > div.left > h4 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 700;
+}
+div.contacts > div.ertebat > div.tel > div.center > div.left > h5 {
+  color: #45535F;
+  font-size: 14px;
+  font-weight: 500;
+}
+div.contacts > div.ertebat > div.tel > div.left {
+  width: 416px;
+  gap: 16px;
+}
+div.contacts > div.ertebat > div.tel > div.left > i {
+  font-size: 32px;
+  color: #23292E;
+}
+div.contacts > div.ertebat > div.tel > div.left > div.left {
+  gap: 4px;
+}
+div.contacts > div.ertebat > div.tel > div.left > div.left > h4 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 700;
+}
+div.contacts > div.ertebat > div.tel > div.left > div.left > h5 {
+  color: #45535F;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+div.mytravel {
+  width: 90%;
+  gap: 30px;
+  margin-top: 50px;
+  margin-right: 120px;
+  margin-bottom: 50px;
+  display: none;
+}
+div.mytravel > div.one {
+  width: 40%;
+  gap: 10px;
+}
+div.mytravel > div.one > i {
+  font-size: 20px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.mytravel > div.one > h2 {
+  color: #23292E;
+  font-size: 18px;
+  font-weight: 800;
+}
+div.mytravel > div.two {
+  width: 287px;
+  gap: 10px;
+}
+div.mytravel > div.two > div.now,
+div.mytravel > div.two > div.befor {
+  width: 138px;
+  height: 36px;
+  border: 1px solid #B2BEC7;
+  border-radius: 20px;
+  padding: 6px 40px;
+  color: #23292E;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+div.mytravel > div.three {
+  width: 100%;
+  gap: 620px;
+  padding: 10px;
+}
+div.mytravel > div.three > div.right {
+  width: 506px;
+  gap: 15px;
+}
+div.mytravel > div.three > div.right > img {
+  width: 219px;
+  height: 134px;
+  border-radius: 8px;
+}
+div.mytravel > div.three > div.right > div.text {
+  gap: 5px;
+}
+div.mytravel > div.three > div.right > div.text > h2 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 800;
+}
+div.mytravel > div.three > div.right > div.text > h4 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.mytravel > div.three > div.left h3 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+div.mytravel > div.four {
+  width: 100%;
+  gap: 620px;
+  padding: 10px;
+}
+div.mytravel > div.four > div.right {
+  width: 506px;
+  gap: 15px;
+}
+div.mytravel > div.four > div.right > img {
+  width: 219px;
+  height: 134px;
+  border-radius: 8px;
+}
+div.mytravel > div.four > div.right > div.text {
+  gap: 5px;
+}
+div.mytravel > div.four > div.right > div.text > h2 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 800;
+}
+div.mytravel > div.four > div.right > div.text > h4 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.mytravel > div.four > div.left h3 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+div.mytravel > div.five {
+  width: 100%;
+  gap: 620px;
+  padding: 10px;
+}
+div.mytravel > div.five > div.right {
+  width: 506px;
+  gap: 15px;
+}
+div.mytravel > div.five > div.right > img {
+  width: 219px;
+  height: 134px;
+  border-radius: 8px;
+}
+div.mytravel > div.five > div.right > div.text {
+  gap: 5px;
+}
+div.mytravel > div.five > div.right > div.text > h2 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 800;
+}
+div.mytravel > div.five > div.right > div.text > h4 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.mytravel > div.five > div.left h3 {
+  color: #23292E;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+div.backtravel {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}
+div.backtravel > div.travelmodal {
+  width: 518px;
+  height: 450px;
+  position: fixed;
+  top: 160px;
+  right: 500px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  gap: 30px;
+  padding: 30px;
+}
+div.backtravel > div.travelmodal > hr {
+  display: none;
+}
+div.backtravel > div.travelmodal > div.one {
+  gap: 310px;
+}
+div.backtravel > div.travelmodal > div.one > h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+}
+div.backtravel > div.travelmodal > div.one > i {
+  font-size: 26px;
+  color: #23292E;
+  cursor: pointer;
+}
+div.backtravel > div.travelmodal > div.two {
+  gap: 5px;
+  height: 54px;
+}
+div.backtravel > div.travelmodal > div.two > div.top {
+  gap: 235px;
+  border: none;
+  padding: 0;
+}
+div.backtravel > div.travelmodal > div.two > div.top > h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #546775;
+}
+div.backtravel > div.travelmodal > div.two > div.bottom {
+  gap: 180px;
+}
+div.backtravel > div.travelmodal > div.two > div.bottom > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+div.backtravel > div.travelmodal > div.three {
+  gap: 212px;
+}
+div.backtravel > div.travelmodal > div.three > h4 {
+  color: #546775;
+  font-size: 16px;
+  font-weight: 500;
+}
+div.backtravel > div.travelmodal > div.four {
+  gap: 155px;
+}
+div.backtravel > div.travelmodal > div.four > h4 {
+  color: #E63946;
+  font-size: 16px;
+  font-weight: 500;
+}
+div.backtravel > div.travelmodal > div.five {
+  gap: 212px;
+}
+div.backtravel > div.travelmodal > div.five > h4 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+}
+div.backtravel > div.travelmodal > button {
+  width: 390px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0D7D96;
+  padding: 10px 16px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-right: 35px;
+}
+
+div.resmenu {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  div.backlog div.logout {
+    top: 350px;
+  }
+  div.transactions > div.two {
+    gap: 300px;
+  }
+  div.favorite > div.jnob > div.top,
+  div.favorite > div.shomal > div.top {
+    gap: 1150px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > i,
+  div.favorite > div.shomal > div.cardbadge > div.card > i {
+    right: 200px;
+  }
+  div.questions > div.search > i {
+    left: 280px;
+  }
+  div.contacts > div.tamas {
+    margin-right: 75px;
+  }
+  div.mytravel {
+    margin-right: 70px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  div.backgender > div.gendermodal {
+    top: 345px;
+    left: 385px;
+  }
+  div.transactions {
+    margin-right: 40px;
+  }
+  div.transactions > div.two {
+    gap: 165px;
+  }
+  div.transactions > div.two > div.right {
+    gap: 135px;
+  }
+  div.transactions > div.two > div.left {
+    gap: 70px;
+  }
+  div.transactions > div.three {
+    gap: 45px;
+  }
+  div.transactions > div.three > div.left {
+    gap: 160px;
+  }
+  div.transactions > div.four {
+    gap: 45px;
+  }
+  div.transactions > div.four > div.left {
+    gap: 135px;
+  }
+  div.transactions > div.five {
+    gap: 110px;
+  }
+  div.transactions > div.five > div.left {
+    gap: 125px;
+  }
+  div.transactions > div.six {
+    gap: 125px;
+  }
+  div.transactions > div.six > div.left {
+    gap: 160px;
+  }
+  div.favorite {
+    margin-right: 20px;
+  }
+  div.favorite > div.jnob > div.top {
+    gap: 930px;
+  }
+  div.favorite > div.jnob > div.cardbadge {
+    gap: 30px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.favorite > div.shomal > div.top {
+    gap: 930px;
+  }
+  div.favorite > div.shomal > div.cardbadge {
+    gap: 30px;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.backadd > div.add {
+    top: 370px;
+    left: 370px;
+  }
+  div.backedit > div.edit {
+    top: 370px;
+    left: 370px;
+  }
+  div.backdel > div.delet {
+    top: 370px;
+    left: 370px;
+  }
+  div.message {
+    left: 710px;
+  }
+  div.questions {
+    margin-right: 175px;
+  }
+  div.questions > div.search > i {
+    left: 290px;
+  }
+  div.questions > details {
+    width: 680px;
+  }
+  div.contacts > div.tamas {
+    width: 1040px;
+    margin-right: 20px;
+  }
+  div.contacts > div.tamas > div.input > div.mozo > input {
+    width: 470px;
+  }
+  div.contacts > div.tamas > div.input > div.flname > input {
+    width: 470px;
+  }
+  div.contacts > div.tamas > div.input > div.email > input {
+    width: 470px;
+  }
+  div.contacts > div.tamas > div.input > div.tel > input {
+    width: 470px;
+  }
+  div.contacts > div.tamas > div.input > div.tozi > input {
+    width: 950px;
+  }
+  div.contacts > div.tamas > button {
+    margin-right: 48rem;
+  }
+  div.aboutas > div.value > div.text > p {
+    width: auto;
+  }
+  div.aboutas > div.value > div.cardbadge {
+    width: 105%;
+  }
+  div.backlog > div.logout {
+    top: 340px;
+    left: 340px;
+  }
+  div.mytravel {
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  div.header {
+    display: none !important;
+  }
+  div.resmenu {
+    width: 390px;
+    height: 88px;
+    padding: 16px;
+    border-top: 1px solid #D6DCE1;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    margin-right: 180px;
+    z-index: 3;
+  }
+  div.resmenu > div.home {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.home > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.home > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.home:focus {
+    outline: none;
+  }
+  div.resmenu > div.home:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.home:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.fav {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.fav > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.fav > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.fav:focus {
+    outline: none;
+  }
+  div.resmenu > div.fav:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.fav:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.travel {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.travel > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.travel > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.travel:focus {
+    outline: none;
+  }
+  div.resmenu > div.travel:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.travel:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.login {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.login > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.login > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.login:focus {
+    outline: none;
+  }
+  div.resmenu > div.login:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.login:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.welcome {
+    width: 358px !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ECEFF2;
+    margin-right: 235px;
+    gap: 0 !important;
+  }
+  div.welcome > div.text {
+    width: 220px !important;
+    margin-left: 50px;
+  }
+  div.welcome > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+    margin-left: 22px;
+  }
+  div.cardbadge {
+    margin-right: 235px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  div.cardbadge > div.info,
+  div.cardbadge > div.fav,
+  div.cardbadge > div.travel {
+    display: none !important;
+  }
+  div.cardbadge > div.transaction {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ECEFF2;
+  }
+  div.cardbadge > div.transaction > i.fa-receipt {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.transaction > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.transaction > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.transaction > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.transaction > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > h4.etebar {
+    width: 75px;
+    height: 21px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B2BEC7;
+    position: absolute;
+    top: 85px;
+    right: 0px;
+    display: block !important;
+  }
+  div.cardbadge > div.wallet {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ECEFF2;
+  }
+  div.cardbadge > div.wallet > i.fa-wallet {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.wallet > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.wallet > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.wallet > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.wallet > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > h4.poshtiban {
+    width: 50px;
+    height: 21px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B2BEC7;
+    position: absolute;
+    top: 196px;
+    right: 0px;
+    display: block !important;
+  }
+  div.cardbadge > div.question {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.question > i.fa-circle-question {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.question > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.question > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.question > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.question > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > div.contact {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.contact > i.fa-headset {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.contact > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.contact > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.contact > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.contact > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > div.about {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.about > i.fa-taco {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.about > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.about > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.about > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.logout {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: start !important;
+    gap: 12px;
+  }
+  div.cardbadge > div.logout > i.fa-arrow-right-from-bracket {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.logout > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.infor {
+    width: 358px;
+    margin-right: 250px;
+    gap: 24px;
+  }
+  div.infor > div.btn {
+    width: auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+  div.backgender {
+    width: 390px !important;
+    position: fixed;
+    right: 225px !important;
+    inset: 0;
+    z-index: 10;
+  }
+  div.backgender > div.gendermodal {
+    width: 390px !important;
+    height: 212px;
+    position: absolute;
+    top: 650px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 40px;
+  }
+  div.backgender > div.gendermodal > hr {
+    display: block !important;
+    width: 80px;
+    height: 5px;
+    background-color: #D6DCE1;
+    margin-right: 130px;
+  }
+  div.backgender > div.gendermodal > div.top > h2 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  div.backgender > div.gendermodal > div.top > i {
+    display: none;
+  }
+  div.transactions {
+    width: 360px;
+    margin-right: 190px;
+  }
+  div.transactions > div.one {
+    width: 50%;
+  }
+  div.transactions > div.two {
+    display: none !important;
+  }
+  div.transactions > div.three,
+  div.transactions > div.four,
+  div.transactions > div.five,
+  div.transactions > div.six {
+    gap: 54px;
+  }
+  div.transactions > div.three > div.right,
+  div.transactions > div.four > div.right,
+  div.transactions > div.five > div.right,
+  div.transactions > div.six > div.right {
+    flex-direction: column !important;
+    gap: 5px;
+  }
+  div.transactions > div.three > div.right > h4.text,
+  div.transactions > div.four > div.right > h4.text,
+  div.transactions > div.five > div.right > h4.text,
+  div.transactions > div.six > div.right > h4.text {
+    display: none !important;
+  }
+  div.transactions > div.three > div.left > h4,
+  div.transactions > div.four > div.left > h4,
+  div.transactions > div.five > div.left > h4,
+  div.transactions > div.six > div.left > h4 {
+    display: none !important;
+  }
+  div.wallets {
+    width: 358px !important;
+    flex-direction: column !important;
+    gap: 12px;
+  }
+  div.wallets > div.right {
+    display: contents !important;
+  }
+  div.wallets > div.right > button {
+    width: 357px !important;
+    margin-top: 300px;
+  }
+  div.wallets div.back {
+    order: 1;
+  }
+  div.wallets > div.left {
+    width: 358px;
+    order: 2;
+  }
+  div.wallets > div.left > div.cart {
+    width: 358px;
+    height: 108px;
+    gap: 20px;
+  }
+  div.wallets > div.left > div.cart > img {
+    width: 50px;
+    height: 35px;
+  }
+  div.wallets > div.left > div.cart > div.mojodi > div.num {
+    margin-top: -10px;
+  }
+  div.wallets div.text {
+    width: 95%;
+    order: 4;
+  }
+  div.wallets input {
+    width: 350px !important;
+    order: 4;
+  }
+  div.wallets div.suggest {
+    order: 5;
+  }
+  div.wallets div.suggest > button.four {
+    display: none;
+  }
+  div.wallets button {
+    order: 6;
+  }
+  div.questions {
+    width: 358px;
+    margin-right: 175px;
+  }
+  div.questions > div.search > input {
+    width: 358px !important;
+  }
+  div.questions > div.search > i {
+    top: 65px;
+    left: 300px;
+  }
+  div.questions > details {
+    width: 358px !important;
+  }
+  div.questions > details > summary {
+    gap: 10px;
+  }
+  div.questions > details > summary > h4 {
+    width: 245px;
+  }
+  div.questions > div.bottom {
+    width: 358px;
+    margin-right: 0;
+    margin-bottom: 150px;
+  }
+  div.questions > div.bottom > h3 {
+    width: 290px;
+  }
+  div.contacts {
+    width: 358px;
+  }
+  div.contacts > div.tamas {
+    border: none;
+    padding: 0;
+    margin-right: 180px;
+  }
+  div.contacts > div.tamas > div.back {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+  }
+  div.contacts > div.tamas > div.back > i {
+    color: #23292E;
+    font-size: 24px;
+    display: block !important;
+  }
+  div.contacts > div.tamas > div.back > h4 {
+    color: #23292E;
+  }
+  div.contacts > div.tamas > div.question {
+    width: 358px;
+  }
+  div.contacts > div.tamas > div.question > div.text {
+    width: 358px;
+    flex-wrap: wrap;
+  }
+  div.contacts > div.tamas > div.question > button {
+    display: none;
+  }
+  div.contacts > div.tamas > div.input {
+    width: 358px;
+    flex-direction: column !important;
+  }
+  div.contacts > div.tamas > div.input > div.mozo,
+  div.contacts > div.tamas > div.input > div.flname,
+  div.contacts > div.tamas > div.input > div.email,
+  div.contacts > div.tamas > div.input > div.tel,
+  div.contacts > div.tamas > div.input > div.tozi {
+    width: 358px;
+  }
+  div.contacts > div.tamas > div.input > div.mozo > input,
+  div.contacts > div.tamas > div.input > div.flname > input,
+  div.contacts > div.tamas > div.input > div.email > input,
+  div.contacts > div.tamas > div.input > div.tel > input,
+  div.contacts > div.tamas > div.input > div.tozi > input {
+    width: 358px;
+  }
+  div.contacts > div.tamas > button.btn {
+    width: 358px;
+    margin: 0;
+  }
+  div.contacts > div.ertebat {
+    width: 358px;
+    flex-direction: column !important;
+    margin-right: 180px;
+    padding: 40px 16px;
+  }
+  div.contacts > div.ertebat > h2 {
+    width: 125px;
+  }
+  div.contacts > div.ertebat > div.tel {
+    width: 358px;
+    flex-direction: column !important;
+    gap: 24px;
+  }
+  div.contacts > div.ertebat > div.tel > div.right,
+  div.contacts > div.ertebat > div.tel > div.center,
+  div.contacts > div.ertebat > div.tel > div.left {
+    width: 330px;
+  }
+  div.aboutas {
+    width: 390px;
+    margin-right: 180px;
+    margin-top: 30px;
+  }
+  div.aboutas > div.back {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+  }
+  div.aboutas > div.back > i {
+    color: #23292E;
+    font-size: 24px;
+    display: block !important;
+  }
+  div.aboutas > div.back > h4 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  div.aboutas > img {
+    width: 390px;
+    height: 372px;
+  }
+  div.aboutas > div.text {
+    width: 358px;
+    height: auto;
+    padding: 0 16px;
+    gap: 16px;
+  }
+  div.aboutas > div.text > p {
+    width: 330px;
+  }
+  div.aboutas > div.value {
+    padding: 40px 16px;
+  }
+  div.aboutas > div.value > div.text {
+    width: 358px;
+  }
+  div.aboutas > div.value > div.text > p {
+    width: 358px;
+  }
+  div.aboutas > div.value > div.cardbadge {
+    width: 358px;
+    align-items: center;
+  }
+  div.backlog {
+    width: 390px !important;
+    position: fixed;
+    right: 225px !important;
+    inset: 0;
+    z-index: 10;
+  }
+  div.backlog > div.logout {
+    width: 390px !important;
+    height: 212px;
+    position: absolute;
+    top: 650px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 34px 16px;
+    gap: 0;
+  }
+  div.backlog > div.logout > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin: 0;
+  }
+  div.backlog > div.logout > div.top {
+    width: 400px;
+    margin-top: 20px;
+  }
+  div.backlog > div.logout > div.top > h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  div.backlog > div.logout > div.top > i {
+    display: none;
+  }
+  div.backlog > div.logout > div.button {
+    width: 400px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  div.backlog > div.logout > div.button > button {
+    width: 358px !important;
+  }
+  div.mytravel {
+    width: 358px;
+    margin-right: 200px;
+  }
+  div.mytravel > div.three,
+  div.mytravel > div.four,
+  div.mytravel > div.five {
+    flex-direction: column;
+    gap: 16px;
+  }
+  div.mytravel > div.three > div.right,
+  div.mytravel > div.four > div.right,
+  div.mytravel > div.five > div.right {
+    width: 357px !important;
+    gap: 7px;
+  }
+  div.mytravel > div.three > div.right > img,
+  div.mytravel > div.four > div.right > img,
+  div.mytravel > div.five > div.right > img {
+    width: 134px;
+    height: 83px;
+  }
+  div.mytravel > div.three > div.right > div.text,
+  div.mytravel > div.four > div.right > div.text,
+  div.mytravel > div.five > div.right > div.text {
+    gap: 0;
+  }
+  div.mytravel > div.three > div.right > div.text > h2,
+  div.mytravel > div.four > div.right > div.text > h2,
+  div.mytravel > div.five > div.right > div.text > h2 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  div.mytravel > div.three > div.right > div.text > h4,
+  div.mytravel > div.four > div.right > div.text > h4,
+  div.mytravel > div.five > div.right > div.text > h4 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  div.mytravel > div.three > div.left,
+  div.mytravel > div.four > div.left,
+  div.mytravel > div.five > div.left {
+    margin-right: 145px;
+  }
+  div.backtravel {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backtravel > div.travelmodal {
+    width: 390px !important;
+    height: 427px;
+    position: absolute;
+    top: 435px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 24px;
+    z-index: 13;
+  }
+  div.backtravel > div.travelmodal > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backtravel > div.travelmodal > div.one > i {
+    display: none;
+  }
+  div.backtravel > div.travelmodal > div.two > div.top {
+    gap: 135px;
+  }
+  div.backtravel > div.travelmodal > div.two > div.bottom {
+    gap: 80px;
+  }
+  div.backtravel > div.travelmodal > div.three {
+    gap: 120px;
+  }
+  div.backtravel > div.travelmodal > div.four {
+    gap: 70px;
+  }
+  div.backtravel > div.travelmodal > div.five {
+    gap: 128px;
+  }
+  div.backtravel > div.travelmodal > button {
+    width: 350px !important;
+    margin: 0;
+  }
+  div.favorite {
+    width: 358px;
+    margin-right: 210px;
+  }
+  div.favorite > div.add > h2 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  div.favorite > div.jnob > div.top {
+    gap: 210px;
+  }
+  div.favorite > div.jnob > div.cardbadge {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none;
+  }
+  div.favorite > div.jnob > div.cardbadge::-webkit-scrollbar {
+    display: none;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card {
+    width: 221px;
+    height: auto;
+    gap: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 221px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > img {
+    width: 221px;
+    height: 171px;
+    flex-shrink: 0;
+  }
+  div.favorite > div.shomal > div.top {
+    gap: 210px;
+  }
+  div.favorite > div.shomal > div.cardbadge {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none;
+  }
+  div.favorite > div.shomal > div.cardbadge::-webkit-scrollbar {
+    display: none;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card {
+    width: 221px;
+    height: auto;
+    gap: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 221px;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card > img {
+    width: 221px;
+    height: 171px;
+    flex-shrink: 0;
+  }
+  div.backadd {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backadd > div.add {
+    width: 390px !important;
+    height: 206px;
+    position: absolute;
+    top: 656px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backadd > div.add > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backadd > div.add > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backadd > div.add > div.top > i {
+    display: none;
+  }
+  div.backadd > div.add > div.btns {
+    flex-direction: column !important;
+  }
+  div.backadd > div.add > div.btns > button {
+    width: 358px;
+    justify-content: center;
+  }
+  div.backedit {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backedit > div.edit {
+    width: 390px !important;
+    height: 225px;
+    position: absolute;
+    top: 637px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backedit > div.edit > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backedit > div.edit > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backedit > div.edit > div.top > i {
+    display: none;
+  }
+  div.backedit > div.edit > div.btns {
+    flex-direction: column !important;
+  }
+  div.backedit > div.edit > div.btns > button {
+    width: 358px;
+    justify-content: center;
+  }
+  div.backdel {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backdel > div.delet {
+    width: 390px !important;
+    height: 209px;
+    position: absolute;
+    top: 653px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backdel > div.delet > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backdel > div.delet > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backdel > div.delet > div.top > i {
+    display: none;
+  }
+  div.backdel > div.delet > div.btns {
+    flex-direction: column !important;
+    gap: 7px;
+  }
+  div.backdel > div.delet > div.btns > button {
+    width: 358px !important;
+  }
+  div.message {
+    left: 0;
+    top: 0;
+    right: 210px;
+    width: 358px;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 768px) {
+  div.header {
+    display: none !important;
+  }
+  div.resmenu {
+    width: 390px;
+    height: 88px;
+    padding: 16px;
+    border-top: 1px solid #D6DCE1;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    margin-right: 180px;
+    z-index: 3;
+  }
+  div.resmenu > div.home {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.home > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.home > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.home:focus {
+    outline: none;
+  }
+  div.resmenu > div.home:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.home:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.fav {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.fav > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.fav > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.fav:focus {
+    outline: none;
+  }
+  div.resmenu > div.fav:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.fav:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.travel {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.travel > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.travel > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.travel:focus {
+    outline: none;
+  }
+  div.resmenu > div.travel:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.travel:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.login {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.login > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.login > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.login:focus {
+    outline: none;
+  }
+  div.resmenu > div.login:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.login:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.welcome {
+    width: 358px !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ECEFF2;
+    margin-right: 235px;
+    gap: 0 !important;
+  }
+  div.welcome > div.text {
+    width: 220px !important;
+    margin-left: 50px;
+  }
+  div.welcome > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+    margin-left: 22px;
+  }
+  div.cardbadge {
+    margin-right: 235px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  div.cardbadge > div.info,
+  div.cardbadge > div.fav,
+  div.cardbadge > div.travel {
+    display: none !important;
+  }
+  div.cardbadge > div.transaction {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ECEFF2;
+  }
+  div.cardbadge > div.transaction > i.fa-receipt {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.transaction > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.transaction > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.transaction > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.transaction > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > h4.etebar {
+    width: 75px;
+    height: 21px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B2BEC7;
+    position: absolute;
+    top: 85px;
+    right: 0px;
+    display: block !important;
+  }
+  div.cardbadge > div.wallet {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ECEFF2;
+  }
+  div.cardbadge > div.wallet > i.fa-wallet {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.wallet > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.wallet > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.wallet > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.wallet > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > h4.poshtiban {
+    width: 50px;
+    height: 21px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B2BEC7;
+    position: absolute;
+    top: 196px;
+    right: 0px;
+    display: block !important;
+  }
+  div.cardbadge > div.question {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.question > i.fa-circle-question {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.question > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.question > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.question > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.question > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > div.contact {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.contact > i.fa-headset {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.contact > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.contact > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.contact > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.contact > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > div.about {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.about > i.fa-taco {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.about > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.about > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.about > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.logout {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: start !important;
+    gap: 12px;
+  }
+  div.cardbadge > div.logout > i.fa-arrow-right-from-bracket {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.logout > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.infor {
+    width: 358px;
+    margin-right: 250px;
+    gap: 24px;
+  }
+  div.infor > div.btn {
+    width: auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+  div.backgender {
+    width: 390px !important;
+    position: fixed;
+    right: 225px !important;
+    inset: 0;
+    z-index: 10;
+  }
+  div.backgender > div.gendermodal {
+    width: 390px !important;
+    height: 212px;
+    position: absolute;
+    top: 650px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 40px;
+  }
+  div.backgender > div.gendermodal > hr {
+    display: block !important;
+    width: 80px;
+    height: 5px;
+    background-color: #D6DCE1;
+    margin-right: 130px;
+  }
+  div.backgender > div.gendermodal > div.top > h2 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  div.backgender > div.gendermodal > div.top > i {
+    display: none;
+  }
+  div.transactions {
+    width: 360px;
+    margin-right: 190px;
+  }
+  div.transactions > div.one {
+    width: 50%;
+  }
+  div.transactions > div.two {
+    display: none !important;
+  }
+  div.transactions > div.three,
+  div.transactions > div.four,
+  div.transactions > div.five,
+  div.transactions > div.six {
+    gap: 54px;
+  }
+  div.transactions > div.three > div.right,
+  div.transactions > div.four > div.right,
+  div.transactions > div.five > div.right,
+  div.transactions > div.six > div.right {
+    flex-direction: column !important;
+    gap: 5px;
+  }
+  div.transactions > div.three > div.right > h4.text,
+  div.transactions > div.four > div.right > h4.text,
+  div.transactions > div.five > div.right > h4.text,
+  div.transactions > div.six > div.right > h4.text {
+    display: none !important;
+  }
+  div.transactions > div.three > div.left > h4,
+  div.transactions > div.four > div.left > h4,
+  div.transactions > div.five > div.left > h4,
+  div.transactions > div.six > div.left > h4 {
+    display: none !important;
+  }
+  div.wallets {
+    width: 358px !important;
+    flex-direction: column !important;
+    gap: 12px;
+  }
+  div.wallets > div.right {
+    display: contents !important;
+  }
+  div.wallets > div.right > button {
+    width: 357px !important;
+    margin-top: 300px;
+  }
+  div.wallets div.back {
+    order: 1;
+  }
+  div.wallets > div.left {
+    width: 358px;
+    order: 2;
+  }
+  div.wallets > div.left > div.cart {
+    width: 358px;
+    height: 108px;
+    gap: 20px;
+  }
+  div.wallets > div.left > div.cart > img {
+    width: 50px;
+    height: 35px;
+  }
+  div.wallets > div.left > div.cart > div.mojodi > div.num {
+    margin-top: -10px;
+  }
+  div.wallets div.text {
+    width: 95%;
+    order: 4;
+  }
+  div.wallets input {
+    width: 350px !important;
+    order: 4;
+  }
+  div.wallets div.suggest {
+    order: 5;
+  }
+  div.wallets div.suggest > button.four {
+    display: none;
+  }
+  div.wallets button {
+    order: 6;
+  }
+  div.questions {
+    width: 358px;
+    margin-right: 175px;
+  }
+  div.questions > div.search > input {
+    width: 358px !important;
+  }
+  div.questions > div.search > i {
+    top: 65px;
+    left: 200px;
+  }
+  div.questions > details {
+    width: 358px !important;
+  }
+  div.questions > details > summary {
+    gap: 10px;
+  }
+  div.questions > details > summary > h4 {
+    width: 245px;
+  }
+  div.questions > div.bottom {
+    width: 358px;
+    margin-right: 0;
+    margin-bottom: 150px;
+  }
+  div.questions > div.bottom > h3 {
+    width: 290px;
+  }
+  div.contacts {
+    width: 358px;
+  }
+  div.contacts > div.tamas {
+    border: none;
+    padding: 0;
+    margin-right: 180px;
+  }
+  div.contacts > div.tamas > div.back {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+  }
+  div.contacts > div.tamas > div.back > i {
+    color: #23292E;
+    font-size: 24px;
+    display: block !important;
+  }
+  div.contacts > div.tamas > div.back > h4 {
+    color: #23292E;
+  }
+  div.contacts > div.tamas > div.question {
+    width: 358px;
+  }
+  div.contacts > div.tamas > div.question > div.text {
+    width: 358px;
+    flex-wrap: wrap;
+  }
+  div.contacts > div.tamas > div.question > button {
+    display: none;
+  }
+  div.contacts > div.tamas > div.input {
+    width: 358px;
+    flex-direction: column !important;
+  }
+  div.contacts > div.tamas > div.input > div.mozo,
+  div.contacts > div.tamas > div.input > div.flname,
+  div.contacts > div.tamas > div.input > div.email,
+  div.contacts > div.tamas > div.input > div.tel,
+  div.contacts > div.tamas > div.input > div.tozi {
+    width: 358px;
+  }
+  div.contacts > div.tamas > div.input > div.mozo > input,
+  div.contacts > div.tamas > div.input > div.flname > input,
+  div.contacts > div.tamas > div.input > div.email > input,
+  div.contacts > div.tamas > div.input > div.tel > input,
+  div.contacts > div.tamas > div.input > div.tozi > input {
+    width: 358px;
+  }
+  div.contacts > div.tamas > button.btn {
+    width: 358px;
+    margin: 0;
+  }
+  div.contacts > div.ertebat {
+    width: 358px;
+    flex-direction: column !important;
+    margin-right: 180px;
+    padding: 40px 16px;
+  }
+  div.contacts > div.ertebat > h2 {
+    width: 125px;
+  }
+  div.contacts > div.ertebat > div.tel {
+    width: 358px;
+    flex-direction: column !important;
+    gap: 24px;
+  }
+  div.contacts > div.ertebat > div.tel > div.right,
+  div.contacts > div.ertebat > div.tel > div.center,
+  div.contacts > div.ertebat > div.tel > div.left {
+    width: 330px;
+  }
+  div.aboutas {
+    width: 390px;
+    margin-right: 180px;
+    margin-top: 30px;
+  }
+  div.aboutas > div.back {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+  }
+  div.aboutas > div.back > i {
+    color: #23292E;
+    font-size: 24px;
+    display: block !important;
+  }
+  div.aboutas > div.back > h4 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  div.aboutas > img {
+    width: 390px;
+    height: 372px;
+  }
+  div.aboutas > div.text {
+    width: 358px;
+    height: auto;
+    padding: 0 16px;
+    gap: 16px;
+  }
+  div.aboutas > div.text > p {
+    width: 330px;
+  }
+  div.aboutas > div.value {
+    padding: 40px 16px;
+  }
+  div.aboutas > div.value > div.text {
+    width: 358px;
+  }
+  div.aboutas > div.value > div.text > p {
+    width: 358px;
+  }
+  div.aboutas > div.value > div.cardbadge {
+    width: 358px;
+    align-items: center;
+  }
+  div.backlog {
+    width: 390px !important;
+    position: fixed;
+    right: 225px !important;
+    inset: 0;
+    z-index: 10;
+  }
+  div.backlog > div.logout {
+    width: 390px !important;
+    height: 212px;
+    position: absolute;
+    top: 650px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 34px 16px;
+    gap: 0;
+  }
+  div.backlog > div.logout > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin: 0;
+  }
+  div.backlog > div.logout > div.top {
+    width: 400px;
+    margin-top: 20px;
+  }
+  div.backlog > div.logout > div.top > h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  div.backlog > div.logout > div.top > i {
+    display: none;
+  }
+  div.backlog > div.logout > div.button {
+    width: 400px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  div.backlog > div.logout > div.button > button {
+    width: 358px !important;
+  }
+  div.mytravel {
+    width: 358px;
+    margin-right: 200px;
+  }
+  div.mytravel > div.three,
+  div.mytravel > div.four,
+  div.mytravel > div.five {
+    flex-direction: column;
+    gap: 16px;
+  }
+  div.mytravel > div.three > div.right,
+  div.mytravel > div.four > div.right,
+  div.mytravel > div.five > div.right {
+    width: 357px !important;
+    gap: 7px;
+  }
+  div.mytravel > div.three > div.right > img,
+  div.mytravel > div.four > div.right > img,
+  div.mytravel > div.five > div.right > img {
+    width: 134px;
+    height: 83px;
+  }
+  div.mytravel > div.three > div.right > div.text,
+  div.mytravel > div.four > div.right > div.text,
+  div.mytravel > div.five > div.right > div.text {
+    gap: 0;
+  }
+  div.mytravel > div.three > div.right > div.text > h2,
+  div.mytravel > div.four > div.right > div.text > h2,
+  div.mytravel > div.five > div.right > div.text > h2 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  div.mytravel > div.three > div.right > div.text > h4,
+  div.mytravel > div.four > div.right > div.text > h4,
+  div.mytravel > div.five > div.right > div.text > h4 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  div.mytravel > div.three > div.left,
+  div.mytravel > div.four > div.left,
+  div.mytravel > div.five > div.left {
+    margin-right: 145px;
+  }
+  div.backtravel {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backtravel > div.travelmodal {
+    width: 390px !important;
+    height: 427px;
+    position: absolute;
+    top: 435px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 24px;
+    z-index: 13;
+  }
+  div.backtravel > div.travelmodal > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backtravel > div.travelmodal > div.one > i {
+    display: none;
+  }
+  div.backtravel > div.travelmodal > div.two > div.top {
+    gap: 135px;
+  }
+  div.backtravel > div.travelmodal > div.two > div.bottom {
+    gap: 80px;
+  }
+  div.backtravel > div.travelmodal > div.three {
+    gap: 120px;
+  }
+  div.backtravel > div.travelmodal > div.four {
+    gap: 70px;
+  }
+  div.backtravel > div.travelmodal > div.five {
+    gap: 128px;
+  }
+  div.backtravel > div.travelmodal > button {
+    width: 350px !important;
+    margin: 0;
+  }
+  div.favorite {
+    width: 358px;
+    margin-right: 210px;
+  }
+  div.favorite > div.add > h2 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  div.favorite > div.jnob > div.top {
+    gap: 210px;
+  }
+  div.favorite > div.jnob > div.cardbadge {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none;
+  }
+  div.favorite > div.jnob > div.cardbadge::-webkit-scrollbar {
+    display: none;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card {
+    width: 221px;
+    height: auto;
+    gap: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 221px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > img {
+    width: 221px;
+    height: 171px;
+    flex-shrink: 0;
+  }
+  div.favorite > div.shomal > div.top {
+    gap: 210px;
+  }
+  div.favorite > div.shomal > div.cardbadge {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none;
+  }
+  div.favorite > div.shomal > div.cardbadge::-webkit-scrollbar {
+    display: none;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card {
+    width: 221px;
+    height: auto;
+    gap: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 221px;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card > img {
+    width: 221px;
+    height: 171px;
+    flex-shrink: 0;
+  }
+  div.backadd {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backadd > div.add {
+    width: 390px !important;
+    height: 206px;
+    position: absolute;
+    top: 656px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backadd > div.add > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backadd > div.add > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backadd > div.add > div.top > i {
+    display: none;
+  }
+  div.backadd > div.add > div.btns {
+    flex-direction: column !important;
+  }
+  div.backadd > div.add > div.btns > button {
+    width: 358px;
+    justify-content: center;
+  }
+  div.backedit {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backedit > div.edit {
+    width: 390px !important;
+    height: 225px;
+    position: absolute;
+    top: 637px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backedit > div.edit > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backedit > div.edit > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backedit > div.edit > div.top > i {
+    display: none;
+  }
+  div.backedit > div.edit > div.btns {
+    flex-direction: column !important;
+  }
+  div.backedit > div.edit > div.btns > button {
+    width: 358px;
+    justify-content: center;
+  }
+  div.backdel {
+    width: 390px !important;
+    position: fixed;
+    right: 190px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backdel > div.delet {
+    width: 390px !important;
+    height: 209px;
+    position: absolute;
+    top: 653px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backdel > div.delet > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backdel > div.delet > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backdel > div.delet > div.top > i {
+    display: none;
+  }
+  div.backdel > div.delet > div.btns {
+    flex-direction: column !important;
+    gap: 7px;
+  }
+  div.backdel > div.delet > div.btns > button {
+    width: 358px !important;
+  }
+  div.message {
+    left: 0;
+    top: 0;
+    right: 210px;
+    width: 358px;
+  }
+}
+@media screen and (max-width: 540px) {
+  div.header {
+    display: none !important;
+  }
+  div.resmenu {
+    width: 390px;
+    height: 88px;
+    padding: 16px;
+    border-top: 1px solid #D6DCE1;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    margin-right: 45px;
+    z-index: 3;
+  }
+  div.resmenu > div.home {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.home > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.home > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.home:focus {
+    outline: none;
+  }
+  div.resmenu > div.home:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.home:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.fav {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.fav > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.fav > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.fav:focus {
+    outline: none;
+  }
+  div.resmenu > div.fav:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.fav:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.travel {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.travel > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.travel > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.travel:focus {
+    outline: none;
+  }
+  div.resmenu > div.travel:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.travel:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.resmenu > div.login {
+    width: 80px;
+    height: 56px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  div.resmenu > div.login > i {
+    font-size: 20px;
+    color: #23292E;
+  }
+  div.resmenu > div.login > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #23292E;
+  }
+  div.resmenu > div.login:focus {
+    outline: none;
+  }
+  div.resmenu > div.login:focus > i {
+    font-size: 20px;
+    color: #0D7D96;
+  }
+  div.resmenu > div.login:focus > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0D7D96;
+  }
+  div.welcome {
+    width: 358px !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ECEFF2;
+    margin-right: 75px;
+    gap: 0 !important;
+  }
+  div.welcome > div.text {
+    width: 220px !important;
+    margin-left: 50px;
+  }
+  div.welcome > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+    margin-left: 22px;
+  }
+  div.cardbadge {
+    margin-right: 75px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  div.cardbadge > div.info,
+  div.cardbadge > div.fav,
+  div.cardbadge > div.travel {
+    display: none !important;
+  }
+  div.cardbadge > div.transaction {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ECEFF2;
+  }
+  div.cardbadge > div.transaction > i.fa-receipt {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.transaction > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.transaction > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.transaction > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.transaction > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > h4.etebar {
+    width: 75px;
+    height: 21px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B2BEC7;
+    position: absolute;
+    top: 85px;
+    right: 0px;
+    display: block !important;
+  }
+  div.cardbadge > div.wallet {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ECEFF2;
+  }
+  div.cardbadge > div.wallet > i.fa-wallet {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.wallet > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.wallet > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.wallet > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.wallet > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > h4.poshtiban {
+    width: 50px;
+    height: 21px;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B2BEC7;
+    position: absolute;
+    top: 196px;
+    right: 0px;
+    display: block !important;
+  }
+  div.cardbadge > div.question {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.question > i.fa-circle-question {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.question > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.question > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.question > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.question > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > div.contact {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.contact > i.fa-headset {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.contact > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.contact > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.contact > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.contact > i.fa-angle-left {
+    display: block !important;
+    font-size: 18px;
+    color: #23292E;
+  }
+  div.cardbadge > div.about {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div.cardbadge > div.about > i.fa-taco {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.about > div.text {
+    width: 292px;
+    height: 49px;
+    gap: 15px;
+  }
+  div.cardbadge > div.about > div.text > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.cardbadge > div.about > div.text > h2 {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 0;
+  }
+  div.cardbadge > div.logout {
+    width: 358px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: start !important;
+    gap: 12px;
+  }
+  div.cardbadge > div.logout > i.fa-arrow-right-from-bracket {
+    font-size: 24px;
+    margin: 0;
+  }
+  div.cardbadge > div.logout > h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  div.infor {
+    width: 358px;
+    margin-right: 75px;
+    gap: 24px;
+  }
+  div.infor > div.btn {
+    width: auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+  div.backgender {
+    width: 390px !important;
+    position: fixed;
+    right: 55px !important;
+    inset: 0;
+    z-index: 10;
+  }
+  div.backgender > div.gendermodal {
+    width: 390px !important;
+    height: 212px;
+    position: absolute;
+    top: 650px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 40px;
+  }
+  div.backgender > div.gendermodal > hr {
+    display: block !important;
+    width: 80px;
+    height: 5px;
+    background-color: #D6DCE1;
+    margin-right: 130px;
+  }
+  div.backgender > div.gendermodal > div.top > h2 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  div.backgender > div.gendermodal > div.top > i {
+    display: none;
+  }
+  div.transactions {
+    width: 360px;
+    margin-right: 80px;
+  }
+  div.transactions > div.one {
+    width: 50%;
+  }
+  div.transactions > div.two {
+    display: none !important;
+  }
+  div.transactions > div.three,
+  div.transactions > div.four,
+  div.transactions > div.five,
+  div.transactions > div.six {
+    gap: 54px;
+  }
+  div.transactions > div.three > div.right,
+  div.transactions > div.four > div.right,
+  div.transactions > div.five > div.right,
+  div.transactions > div.six > div.right {
+    flex-direction: column !important;
+    gap: 5px;
+  }
+  div.transactions > div.three > div.right > h4.text,
+  div.transactions > div.four > div.right > h4.text,
+  div.transactions > div.five > div.right > h4.text,
+  div.transactions > div.six > div.right > h4.text {
+    display: none !important;
+  }
+  div.transactions > div.three > div.left > h4,
+  div.transactions > div.four > div.left > h4,
+  div.transactions > div.five > div.left > h4,
+  div.transactions > div.six > div.left > h4 {
+    display: none !important;
+  }
+  div.wallets {
+    width: 358px !important;
+    flex-direction: column !important;
+    gap: 12px;
+    margin-right: 70px !important;
+  }
+  div.wallets > div.right {
+    display: contents !important;
+  }
+  div.wallets > div.right > button {
+    width: 357px !important;
+    margin-top: 300px;
+  }
+  div.wallets div.back {
+    order: 1;
+  }
+  div.wallets > div.left {
+    width: 358px;
+    order: 2;
+  }
+  div.wallets > div.left > div.cart {
+    width: 358px;
+    height: 108px;
+    gap: 20px;
+  }
+  div.wallets > div.left > div.cart > img {
+    width: 50px;
+    height: 35px;
+  }
+  div.wallets > div.left > div.cart > div.mojodi > div.num {
+    margin-top: -10px;
+  }
+  div.wallets div.text {
+    width: 95%;
+    order: 4;
+  }
+  div.wallets input {
+    width: 350px !important;
+    order: 4;
+  }
+  div.wallets div.suggest {
+    order: 5;
+  }
+  div.wallets div.suggest > button.four {
+    display: none;
+  }
+  div.wallets button {
+    order: 6;
+  }
+  div.questions {
+    width: 358px;
+    margin-right: 75px;
+  }
+  div.questions > div.search > input {
+    width: 358px !important;
+  }
+  div.questions > div.search > i {
+    top: 65px;
+    left: 70px;
+  }
+  div.questions > details {
+    width: 358px !important;
+  }
+  div.questions > details > summary {
+    gap: 10px;
+  }
+  div.questions > details > summary > h4 {
+    width: 245px;
+  }
+  div.questions > div.bottom {
+    width: 358px;
+    margin-right: 0;
+    margin-bottom: 150px;
+  }
+  div.questions > div.bottom > h3 {
+    width: 290px;
+  }
+  div.contacts {
+    width: 358px;
+  }
+  div.contacts > div.tamas {
+    border: none;
+    padding: 0;
+    margin-right: 75px;
+  }
+  div.contacts > div.tamas > div.back {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+  }
+  div.contacts > div.tamas > div.back > i {
+    color: #23292E;
+    font-size: 24px;
+    display: block !important;
+  }
+  div.contacts > div.tamas > div.back > h4 {
+    color: #23292E;
+  }
+  div.contacts > div.tamas > div.question {
+    width: 358px;
+  }
+  div.contacts > div.tamas > div.question > div.text {
+    width: 358px;
+    flex-wrap: wrap;
+  }
+  div.contacts > div.tamas > div.question > button {
+    display: none;
+  }
+  div.contacts > div.tamas > div.input {
+    width: 358px;
+    flex-direction: column !important;
+  }
+  div.contacts > div.tamas > div.input > div.mozo,
+  div.contacts > div.tamas > div.input > div.flname,
+  div.contacts > div.tamas > div.input > div.email,
+  div.contacts > div.tamas > div.input > div.tel,
+  div.contacts > div.tamas > div.input > div.tozi {
+    width: 358px;
+  }
+  div.contacts > div.tamas > div.input > div.mozo > input,
+  div.contacts > div.tamas > div.input > div.flname > input,
+  div.contacts > div.tamas > div.input > div.email > input,
+  div.contacts > div.tamas > div.input > div.tel > input,
+  div.contacts > div.tamas > div.input > div.tozi > input {
+    width: 358px;
+  }
+  div.contacts > div.tamas > button.btn {
+    width: 358px;
+    margin: 0;
+  }
+  div.contacts > div.ertebat {
+    width: 358px;
+    flex-direction: column !important;
+    margin-right: 75px;
+    padding: 40px 16px;
+  }
+  div.contacts > div.ertebat > h2 {
+    width: 125px;
+  }
+  div.contacts > div.ertebat > div.tel {
+    width: 358px;
+    flex-direction: column !important;
+    gap: 24px;
+  }
+  div.contacts > div.ertebat > div.tel > div.right,
+  div.contacts > div.ertebat > div.tel > div.center,
+  div.contacts > div.ertebat > div.tel > div.left {
+    width: 330px;
+  }
+  div.aboutas {
+    width: 390px;
+    margin-right: 55px;
+    margin-top: 30px;
+  }
+  div.aboutas > div.back {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+  }
+  div.aboutas > div.back > i {
+    color: #23292E;
+    font-size: 24px;
+    display: block !important;
+  }
+  div.aboutas > div.back > h4 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  div.aboutas > img {
+    width: 390px;
+    height: 372px;
+  }
+  div.aboutas > div.text {
+    width: 358px;
+    height: auto;
+    padding: 0 16px;
+    gap: 16px;
+  }
+  div.aboutas > div.text > p {
+    width: 330px;
+  }
+  div.aboutas > div.value {
+    padding: 40px 16px;
+  }
+  div.aboutas > div.value > div.text {
+    width: 358px;
+  }
+  div.aboutas > div.value > div.text > p {
+    width: 358px;
+  }
+  div.aboutas > div.value > div.cardbadge {
+    width: 358px;
+    align-items: center;
+  }
+  div.backlog {
+    width: 390px !important;
+    position: fixed;
+    right: 60px !important;
+    inset: 0;
+    z-index: 10;
+  }
+  div.backlog > div.logout {
+    width: 390px !important;
+    height: 212px;
+    position: absolute;
+    top: 650px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 34px 16px;
+    gap: 0;
+  }
+  div.backlog > div.logout > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin: 0;
+  }
+  div.backlog > div.logout > div.top {
+    width: 400px;
+    margin-top: 20px;
+  }
+  div.backlog > div.logout > div.top > h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  div.backlog > div.logout > div.top > i {
+    display: none;
+  }
+  div.backlog > div.logout > div.button {
+    width: 400px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  div.backlog > div.logout > div.button > button {
+    width: 358px !important;
+  }
+  div.mytravel {
+    width: 358px;
+    margin-right: 75px;
+  }
+  div.mytravel > div.three,
+  div.mytravel > div.four,
+  div.mytravel > div.five {
+    flex-direction: column;
+    gap: 16px;
+  }
+  div.mytravel > div.three > div.right,
+  div.mytravel > div.four > div.right,
+  div.mytravel > div.five > div.right {
+    width: 357px !important;
+    gap: 7px;
+  }
+  div.mytravel > div.three > div.right > img,
+  div.mytravel > div.four > div.right > img,
+  div.mytravel > div.five > div.right > img {
+    width: 134px;
+    height: 83px;
+  }
+  div.mytravel > div.three > div.right > div.text,
+  div.mytravel > div.four > div.right > div.text,
+  div.mytravel > div.five > div.right > div.text {
+    gap: 0;
+  }
+  div.mytravel > div.three > div.right > div.text > h2,
+  div.mytravel > div.four > div.right > div.text > h2,
+  div.mytravel > div.five > div.right > div.text > h2 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  div.mytravel > div.three > div.right > div.text > h4,
+  div.mytravel > div.four > div.right > div.text > h4,
+  div.mytravel > div.five > div.right > div.text > h4 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  div.mytravel > div.three > div.left,
+  div.mytravel > div.four > div.left,
+  div.mytravel > div.five > div.left {
+    margin-right: 145px;
+  }
+  div.backtravel {
+    width: 390px !important;
+    position: fixed;
+    right: 55px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backtravel > div.travelmodal {
+    width: 390px !important;
+    height: 427px;
+    position: absolute;
+    top: 435px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 24px;
+    z-index: 13;
+  }
+  div.backtravel > div.travelmodal > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backtravel > div.travelmodal > div.one > i {
+    display: none;
+  }
+  div.backtravel > div.travelmodal > div.two > div.top {
+    gap: 135px;
+  }
+  div.backtravel > div.travelmodal > div.two > div.bottom {
+    gap: 80px;
+  }
+  div.backtravel > div.travelmodal > div.three {
+    gap: 120px;
+  }
+  div.backtravel > div.travelmodal > div.four {
+    gap: 70px;
+  }
+  div.backtravel > div.travelmodal > div.five {
+    gap: 128px;
+  }
+  div.backtravel > div.travelmodal > button {
+    width: 350px !important;
+    margin: 0;
+  }
+  div.favorite {
+    width: 358px;
+    margin-right: 75px;
+  }
+  div.favorite > div.add > h2 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  div.favorite > div.jnob > div.top {
+    gap: 210px;
+  }
+  div.favorite > div.jnob > div.cardbadge {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none;
+  }
+  div.favorite > div.jnob > div.cardbadge::-webkit-scrollbar {
+    display: none;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card {
+    width: 221px;
+    height: auto;
+    gap: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 221px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.favorite > div.jnob > div.cardbadge > div.card > img {
+    width: 221px;
+    height: 171px;
+    flex-shrink: 0;
+  }
+  div.favorite > div.shomal > div.top {
+    gap: 210px;
+  }
+  div.favorite > div.shomal > div.cardbadge {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none;
+  }
+  div.favorite > div.shomal > div.cardbadge::-webkit-scrollbar {
+    display: none;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card {
+    width: 221px;
+    height: auto;
+    gap: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 221px;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card > i {
+    right: 175px;
+  }
+  div.favorite > div.shomal > div.cardbadge > div.card > img {
+    width: 221px;
+    height: 171px;
+    flex-shrink: 0;
+  }
+  div.backadd {
+    width: 390px !important;
+    position: fixed;
+    right: 60px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backadd > div.add {
+    width: 390px !important;
+    height: 206px;
+    position: absolute;
+    top: 656px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backadd > div.add > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backadd > div.add > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backadd > div.add > div.top > i {
+    display: none;
+  }
+  div.backadd > div.add > div.btns {
+    flex-direction: column !important;
+  }
+  div.backadd > div.add > div.btns > button {
+    width: 358px;
+    justify-content: center;
+  }
+  div.backedit {
+    width: 390px !important;
+    position: fixed;
+    right: 60px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backedit > div.edit {
+    width: 390px !important;
+    height: 225px;
+    position: absolute;
+    top: 637px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backedit > div.edit > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backedit > div.edit > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backedit > div.edit > div.top > i {
+    display: none;
+  }
+  div.backedit > div.edit > div.btns {
+    flex-direction: column !important;
+  }
+  div.backedit > div.edit > div.btns > button {
+    width: 358px;
+    justify-content: center;
+  }
+  div.backdel {
+    width: 390px !important;
+    position: fixed;
+    right: 60px !important;
+    inset: 0;
+    z-index: 12;
+  }
+  div.backdel > div.delet {
+    width: 390px !important;
+    height: 209px;
+    position: absolute;
+    top: 653px;
+    right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 16px;
+    gap: 16px;
+    z-index: 13;
+  }
+  div.backdel > div.delet > hr {
+    display: block !important;
+    width: 80px;
+    background-color: #D6DCE1;
+    margin-right: 140px;
+  }
+  div.backdel > div.delet > div.top {
+    padding: 0;
+    margin: 0;
+  }
+  div.backdel > div.delet > div.top > i {
+    display: none;
+  }
+  div.backdel > div.delet > div.btns {
+    flex-direction: column !important;
+    gap: 7px;
+  }
+  div.backdel > div.delet > div.btns > button {
+    width: 358px !important;
+  }
+  div.message {
+    left: 0;
+    top: 0;
+    right: 60px;
+    width: 358px;
+  }
+}/*# sourceMappingURL=profile.css.map */
